@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* padding: 12px 0; */
+}
+
+.container {
+    max-width: 1301px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.nav_all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.ul  .btna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 153px;
+    height: 50px;
+    border-radius: 100px;
+    background: #454545;
+    display: none;
+}
+
+.ul  .btna .btn1 svg {
+    width: 25px;
+    height: 14px;
+    border: 2px;
+    color: white;
+}
+
+.ul  .btna .btn1 p {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.86px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.ul li a {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    text-align: left;
+    color: #454545;
+    height: 19px;
+}
+
+.ul_list_ab p {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    text-align: left;
+    color: #454545;
+    height: 19px;
+    display: none;
+}
+
+.ul_list_ab h5 {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    text-align: left;
+    color: #454545;
+    height: 19px;
+    display: none;
+}
+
+.ul_list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.ul_list_a p {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    text-align: left;
+    color: #454545;
+    height: 19px;
+}
+
+.ul_list_a h5 {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    text-align: left;
+    color: #454545;
+    height: 19px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.menu_list {
+    display: none;
+    transition: all .15s linear;
+}
+
+.logo_img img {
+    width: 170px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.logo_link {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+}
+
+.logo_link_all .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 153px;
+    height: 50px;
+    border-radius: 100px;
+    background: #454545;
+}
+
+.logo_link_all .btn .btn1 svg {
+    width: 25px;
+    height: 14px;
+    border: 2px;
+    color: white;
+}
+
+.logo_link_all .btn .btn1 p {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.86px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.navbar_sorch {
+    border: 1px solid #454545;
+    height: 50px;
+    width: 626px;
+    padding: 0 10px;
+    flex: 1;
+    display: flex;
+    border-radius: 4px;
+    position: relative;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.navbar_sorch input {
+    flex: 1;
+    outline: none;
+    border: none;
+}
+
+.navbar_sorch input::placeholder {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.86px;
+    text-align: left;
+    color: #454545;
+}
+
+.navbar_sorch select {
+    border: none;
+    padding: 0 20px;
+    background-color: rgb(91, 213, 61);
+    color: white;
+    font-size: 14px;
+    width: 150px;
+    outline: none;
+}
+
+.wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wishlists{
+    display: none;
+}
+
+.wishlist_all {
+    position: relative;
+}
+
+.wishlist_all .span {
+    padding: 0px 3px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: -20%;
+    margin-left: -3px;
+}
+
+.wishlist_all svg {
+    width: 20px;
+    height: 18px;
+    color: #454545;
+}
+
+.wishlist_all img {
+    width: 20px;
+    height: 18px;
+}
+
+.wishlist_all p {
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.39px;
+    text-align: left;
+    color: #454545;
+}
+
+@media(max-width: 360px) {
+    .nav_all {
+        .ul {
+            position: absolute;
+            top:105px;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: white;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease;
+            z-index: 10;
+            transform-origin: top;
+            transform: scaleY(0);
+            line-height: 32px;
+           
+
+            &.show {
+                transform: scaleY(1);
+            }
+
+            li {
+                border-bottom: 1px solid #454545;
+                width: 328px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    text-align: center;
+                    margin-bottom: 15px;
+
+                }
+             
+                .ul_list_ab p {
+                    display: block;
+                }
+
+                .ul_list_ab h5 {
+                    display: block;
+                }
+            }
+            .btna {
+                display: flex;
+                align-items: center;
+                width: 328px;
+                height: 50px;
+                border-radius: 100px ;
+                justify-content: center;
+                
+            }
+
+        }
+
+        .ul_list {
+            display: none;
+        }
+        .ul_list_ab p {
+            display: block;
+        }
+        .ul_list_ab h5 {
+            display: block;
+        }
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 14px 0;
+    }
+
+    .menu_list {
+        display: block;
+        font-size: 25px;
+        margin-top: -7px;
+        color:  #454545;
+        transition: all .15s linear;
+    }
+
+    .logo_img img {
+        width: 150px;
+        height: 24px;
+        object-fit: contain;
+    
+    }
+
+    .logo_link {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 31px;
+    }
+
+    .logo_link_all .btn {
+        display: none;
+    }
+
+    .navbar_sorch {
+        border: 1px solid #454545;
+        width: 328px;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 100px;
+        margin-top: -20px;
+    }
+
+    .navbar_sorch input {
+        flex: 1;
+        outline: none;
+        border: none;
+    }
+
+    .navbar_sorch input::placeholder {
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19.12px;
+        text-align: left;
+    }
+    .wishlist {
+       display: none;
+    }
+    .wishlists{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .wishlist_all {
+        position: relative;
+    }
+
+    .wishlist_all .span {
+        padding: 0px 3px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        font-size: 12px;
+        position: absolute;
+        top: -20%;
+        margin-left: -3px;
+    }
+
+    .wishlist_all svg {
+        width: 20px;
+        height: 18px;
+        color: #454545;
+    }
+
+    .wishlist_all img {
+        width: 20px;
+        height: 18px;
+    }
+
+    .wishlist_all p {
+        display: none;
+    }
+}
