@@ -114,6 +114,7 @@ const Blog = () => {
 
 
 
+
             <SwiperSlide>  <div className="blogAll">
       <div className="blog_all">
     <div className="blog_img">
@@ -137,16 +138,7 @@ const Blog = () => {
 </div>
             </div>
 
-            <div className="btn_all">
-                  <div className="btn_row">
-                  <div className="btn1">
-                        <p>Перейти в блог</p>
-                    </div>
-                    <div className="btn1">
-                    <VscArrowRight />
-                    </div>
-                  </div>
-                </div>
+     
             </SwiperSlide>
             <SwiperSlide>  <div className="blogAll">
       <div className="blog_all">
@@ -171,18 +163,8 @@ const Blog = () => {
 </div>
             </div>
 
-            <div className="btn_all">
-                  <div className="btn_row">
-                  <div className="btn1">
-                        <p>Перейти в блог</p>
-                    </div>
-                    <div className="btn1">
-                    <VscArrowRight />
-                    </div>
-                  </div>
-                </div>
+       
             </SwiperSlide>
-
             <SwiperSlide>  <div className="blogAll">
       <div className="blog_all">
     <div className="blog_img">
@@ -206,18 +188,8 @@ const Blog = () => {
 </div>
             </div>
 
-            <div className="btn_all">
-                  <div className="btn_row">
-                  <div className="btn1">
-                        <p>Перейти в блог</p>
-                    </div>
-                    <div className="btn1">
-                    <VscArrowRight />
-                    </div>
-                  </div>
-                </div>
-            </SwiperSlide>
 
+            </SwiperSlide>
             <SwiperSlide>  <div className="blogAll">
       <div className="blog_all">
     <div className="blog_img">
@@ -241,54 +213,19 @@ const Blog = () => {
 </div>
             </div>
 
-            <div className="btn_all">
-                  <div className="btn_row">
-                  <div className="btn1">
-                        <p>Перейти в блог</p>
-                    </div>
-                    <div className="btn1">
-                    <VscArrowRight />
-                    </div>
-                  </div>
-                </div>
-            </SwiperSlide>
 
-            <SwiperSlide>  <div className="blogAll">
-      <div className="blog_all">
-    <div className="blog_img">
-        <div className="blog_img_row">
-          <img src={rasm} alt="" />
-        </div>
-        <div className="blog_img_row">
-          <img src={rasm2} alt="" />
-        </div>
-      
-    </div>
-    <div className="p">
-    <div className="p1">
-        <p>Как правильно освещать дом снаружи?</p>
-        </div>
-        <div className="p1">
-        <FiArrowUpRight />
-        </div>
-    </div>
-    <p>01.01.2024</p>
-</div>
-            </div>
-
-            <div className="btn_all">
-                  <div className="btn_row">
-                  <div className="btn1">
-                        <p>Перейти в блог</p>
-                    </div>
-                    <div className="btn1">
-                    <VscArrowRight />
-                    </div>
-                  </div>
-                </div>
             </SwiperSlide>
       </Swiper>
-            
+      <div className="rows">
+         <div className="col">
+           <div className="btn1">
+                        <p>Перейти в блог</p>
+                    </div>
+                    <div className="btn1">
+                    <VscArrowRight />
+                    </div>
+           </div>
+         </div>  
         </div>
     );
 }

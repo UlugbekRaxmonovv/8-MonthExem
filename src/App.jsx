@@ -4,16 +4,26 @@ import Navbar from './components/Navbar/Navbar'
 import { Route,Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Katalog from './Pages/Каtalog/Каtalog'
+import Modul from './components/Modul/Modul'
+import SingleRoute from './Pages/SingleRoute/SingleRoute'
 
 
 function App() {
-
+  const [islogin, setIsLogin] = useState(false);
+  document.body.style.overflow =  islogin ? "hidden" : "auto"
   return (
     <>
     <Navbar />
+    {
+        islogin ?    <Modul btn1={setIsLogin}  >
+         </Modul>
+         :
+         <></>
+      }
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/catalog" element={<Katalog/>} />
+      <Route path="/single/:id" element={<SingleRoute/>} />
     </Routes>
      
     </>
