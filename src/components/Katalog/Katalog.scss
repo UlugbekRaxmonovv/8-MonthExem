@@ -6,6 +6,7 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-top: 97px;
+    cursor: pointer;
     .katalog_item{
         h1{
             font-family: Manrope;
@@ -333,6 +334,7 @@ body{
         gap: 8px;
         padding: 80px 0;
         margin-top: -20%;
+        margin-left: 0%;
     }
     .swiper-pagination{
         margin-top: 480%;
