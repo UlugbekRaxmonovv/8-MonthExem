@@ -11,6 +11,7 @@ import Single from '../Single/Single';
 import Loading from '../Loading/Loading';
 import {useDispatch,useSelector } from 'react-redux';
 import {toggleHeart} from '../../components/context/slices/wishlistSlice'
+import { addToCart } from '../context/slices/cartSlice';
 import { CiHeart } from 'react-icons/ci';
 
 
@@ -60,7 +61,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
              <h6>{users.price}</h6>
          </div>
          <div className="card_all_all">
-        <IoCartOutline/>
+        <IoCartOutline onClick={() =>dispatch(addToCart(users))}/>
          </div>
 
       </div>

@@ -1,0 +1,133 @@
+.grids_All{
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;;
+    gap: 20px;
+
+}
+.katalog_hammasi_column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .katalog_link_item{
+        width: 640px;
+        height: 250px;
+        border-radius: 20px ;
+        background: #F2F2F2;
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        padding: 32px 32px;
+        .katalog_link_item_list{
+            h1{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px;
+                text-align: left;
+                color: #454545;
+                
+            }
+            .grid-item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: -15%;
+                .item5{
+                    p{
+                        font-family: Manrope;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 15.4px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+            }
+            img{
+                width: 342px;
+                height: 169px;
+               object-fit: contain;
+                
+            }
+        }
+        
+    }
+}
+
+@media(max-width:360px){
+    .grids_All{
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;;
+        gap: 10px;
+        .item2 {
+             display: grid !important;
+             grid-template-columns: 1fr;
+            align-items: center;
+            justify-content: center;
+            grid-row: 1 / span 1;
+            height: 170px;
+            img{
+                width: 73px;
+                height: 91px;
+                object-fit: contain;
+            }
+    
+    }
+ 
+     
+}
+.katalog_hammasi_column{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+    .katalog_link_item{
+        width: 328px;
+        height: 190px;
+        padding: 20px 20px;
+        .katalog_link_item_list{
+            h1{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 17.6px;
+                text-align: left;                    
+                color: #454545;
+                
+            }
+            .grid-item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: -15%;
+                .item5{
+                    p{
+                        font-family: Manrope;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 15.4px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+            }
+            img{
+                width: 174.41px;
+                height: 42.32px;          
+               object-fit: contain;
+                
+            }
+        }
+        
+    }
+}
+}

@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const wishlistItems = useSelector((state) => state.wishlist.value);
+    const  cartItems  = useSelector(state => state.cart.value);
 
 
     return (
@@ -108,7 +109,7 @@ const Navbar = () => {
                              <div className="wishlists">
                                 <div className="wishlist_all">
                                 <IoCartOutline />
-                                <span className="span">1</span>
+                                <span className="span">{cartItems?.length}</span>
                                 </div>
                                 <div className="wishlist_all">
                                 <p>Корзина</p>
@@ -180,7 +181,7 @@ const Navbar = () => {
                              <div className="wishlist">
                                 <div className="wishlist_all">
                                 <IoCartOutline />
-                                <span className="span">1</span>
+                                <span className="span">{cartItems?.length}</span>
                                 </div>
                                 <div className="wishlist_all">
                                 <p>Корзина</p>

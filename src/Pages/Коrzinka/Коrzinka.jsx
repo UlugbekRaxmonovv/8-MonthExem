@@ -5,13 +5,66 @@ import rasm from '../../assets/img/blog.png'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { RiDeleteBinLine } from "react-icons/ri";
 import Footer from '../../components/Footer/Footer'
+import { useSelector,useDispatch } from 'react-redux';
+import { RiDeleteBinFill } from "react-icons/ri";
+import { decrementCart,incremented,removeFromCart,deleteAllCart } from '../../components/context/slices/cartSlice';
 const Korzinka = () => {
+    const dispatch = useDispatch();
+    const  cartItems  = useSelector(state => state.cart.value);
+    let javob1 =cartItems?.reduce((a,b) => a + (b.price  * b.quantity),0)
+    let javob = Math.floor(javob1)
+
+    let links =cartItems?.map((item) =>(
+      <div className="korzinka_row" key={item.id}>
+      <div className="korzinka_row_link">
+         <div className="korzinka_all_List">
+         <div className="photo">
+             <div className="img">
+
+                <img src={item.url} alt="" />
+             </div>
+              </div>
+              <div className="photoa">
+                <div className="pr">
+                <div className="pr1">
+                     <p>{item.title}</p>
+                 </div>
+                 <div className="pr1">
+                    <h4>{item.price}</h4>
+                 </div>
+                </div>
+              </div>
+         </div>
+      </div>
+      <div className="korzinka_row_link">
+         <p>{item.createdAt}</p>
+      </div>
+      <div className="korzinka_row_link">
+         <p>{item.desc}</p>
+      </div>
+      <div className="korzinka_row_link">
+         <div className="ink">
+         <div className="ink_all">
+                 <button disabled={item.quantity <= 1}  onClick={()=>dispatch(decrementCart(item))}>-</button>
+             </div>
+             <div className="ink_allr">
+                <span>{item.quantity}</span>
+             </div>
+             <div className="ink_all">
+                 <button onClick={() =>dispatch(incremented(item))}>+</button>
+             </div>
+             <RiDeleteBinLine className='delet'   onClick={() => dispatch(removeFromCart(item))} />
+         </div>
+       
+      </div>
+    </div>
+    )) 
     return (
      <>
         <div className='container all_Oll'>
              <div className="korzinka_all">
             <div className="korzinka_all_row">
-                <NavLink>
+                <NavLink to={'/'}>
                 Главная
                 </NavLink>
             </div>
@@ -19,7 +72,7 @@ const Korzinka = () => {
               <MdKeyboardArrowRight/>
             </div>
             <div className="korzinka_all_row">
-                <NavLink>
+                <NavLink to={'/catalog'} >
                 Каталог
                 </NavLink>
             </div>
@@ -34,7 +87,7 @@ const Korzinka = () => {
              </div>
              <div className="korzinka_alls">
             <div className="korzinka_all_row">
-                <NavLink>
+                <NavLink to={'/'}> 
                 Главная
                 </NavLink>
             </div>
@@ -42,7 +95,7 @@ const Korzinka = () => {
               <MdKeyboardArrowRight/>
             </div>
             <div className="korzinka_all_row">
-                <NavLink>
+                <NavLink to={'catalog'}>
                 Каталог
                 </NavLink>
             </div>
@@ -82,52 +135,11 @@ const Korzinka = () => {
                 <h5>Артикул  </h5>
              </div>
              <div className="korzinka_row_link">
-                <h5>Количество</h5>
+                <h5>Количество</h5> 
              </div>
+           
            </div>
-           <div className="korzinka_row">
-             <div className="korzinka_row_link">
-                <div className="korzinka_all_List">
-                <div className="photo">
-                    <div className="img">
-
-                       <img src={rasm} alt="" />
-                    </div>
-                     </div>
-                     <div className="photoa">
-                       <div className="pr">
-                       <div className="pr1">
-                            <p>Встраиваемый светильник Novotech</p>
-                        </div>
-                        <div className="pr1">
-                           <h4>6 399₽</h4>
-                        </div>
-                       </div>
-                     </div>
-                </div>
-             </div>
-             <div className="korzinka_row_link">
-                <p>Светильник RADUGA COMBO XS Промышленное освещение; 50Вт; 230В; S4; XS;</p>
-             </div>
-             <div className="korzinka_row_link">
-                <p>RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS  </p>
-             </div>
-             <div className="korzinka_row_link">
-                <div className="ink">
-                <div className="ink_all">
-                        <button>-</button>
-                    </div>
-                    <div className="ink_allr">
-                       <span>1</span>
-                    </div>
-                    <div className="ink_all">
-                        <button>+</button>
-                    </div>
-                    <RiDeleteBinLine className='delet' />
-                </div>
-              
-             </div>
-           </div>
+         {links}
 
     </div>
 
@@ -208,7 +220,7 @@ const Korzinka = () => {
    </div>
 </div>
  <div className="kupon_item">
-   <h6>12 800₽</h6>
+   <h6>{javob}</h6>
 
    <div className="kupon_btn">
       <div className="lupon_btn1">

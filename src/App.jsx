@@ -8,6 +8,8 @@ import Modul from './components/Modul/Modul'
 import SingleRoute from './Pages/SingleRoute/SingleRoute'
 import Wishlist from './Pages/Wishlist/Wishlist'
 import Korzinka from './Pages/Коrzinka/Коrzinka'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   document.body.style.overflow =  islogin ? "hidden" : "auto"
   return (
     <>
+    <ToastContainer/>
     <Navbar />
     {
         islogin ?    <Modul btn1={setIsLogin}  >
