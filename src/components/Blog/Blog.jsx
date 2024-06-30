@@ -83,7 +83,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <div className="blog">
+            <div className="blog" >
               {links}
             </div>
 

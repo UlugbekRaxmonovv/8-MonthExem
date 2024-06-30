@@ -1,5 +1,5 @@
 import React,{ useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import rasm from '../../assets/img/logo.png'
 import { RiMenu2Line } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
@@ -9,9 +9,11 @@ import { IoCartOutline } from "react-icons/io5";
 import { TbMenuDeep } from "react-icons/tb";
 import { VscChromeClose } from "react-icons/vsc";
 import './Navbar.scss'
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
+    const wishlistItems = useSelector((state) => state.wishlist.value);
 
 
     return (
@@ -77,10 +79,10 @@ const Navbar = () => {
                       <Link to={'/'}>  <img src={rasm} alt="" /></Link>
                     </div>
                     <div className="logo_link_all">
-                            <Link>
+                            <Link >
                              <div className="wishlists">
                                 <div className="wishlist_all">
-                                <FaRegHeart />
+                                <FaRegHeart  />
                                 <span className="span">1</span>
                                 </div>
                                 <div className="wishlist_all">
@@ -149,11 +151,11 @@ const Navbar = () => {
                     </div>
                         </div>
                         <div className="logo_link_all">
-                            <Link>
+                            <Link  to={'wishlist'}>
                              <div className="wishlist">
                                 <div className="wishlist_all">
                                 <FaRegHeart />
-                                <span className="span">1</span>
+                                <span className="span">{wishlistItems?.length}</span>
                                 </div>
                                 <div className="wishlist_all">
                                 <p>Избранное</p>

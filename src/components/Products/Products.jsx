@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import './Products.scss'
 import './ProductAll.scss'
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { VscArrowRight } from 'react-icons/vsc';
 import Modul from '../Modul/Modul';
@@ -9,11 +9,16 @@ import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import Single from '../Single/Single';
 import Loading from '../Loading/Loading';
+import {useDispatch,useSelector } from 'react-redux';
+import {toggleHeart} from '../../components/context/slices/wishlistSlice'
+import { CiHeart } from 'react-icons/ci';
 
 
 
 let Api_Url = "https://667fec3456c2c76b495a8d83.mockapi.io"
-const Products = ({data, btn1, btn,isLoading}) => {
+const Products = ({data, btn1, btn,isLoading,title}) => {
+    const dispatch = useDispatch();
+    const wishlist = useSelector(state => state.wishlist.value);
     const [searchParams, setSearchParams] = useSearchParams();
     const [productDetails, setProductDetails] = useState(null);
     useEffect(() => {
@@ -37,7 +42,13 @@ const Products = ({data, btn1, btn,isLoading}) => {
            <img src={users.url} alt="" onClick={() => setSearchParams({ details: users.id})} />
          </div>
          <div className="img_row">
-             <FaRegHeart/>
+            <span onClick={() => dispatch(toggleHeart(users))}>
+            {
+            wishlist?.some(item => item.id === users.id) ? <FaHeart  style={{color:'red',fontSize:'20px'}} />
+            : <CiHeart    style={{fontSize:'20px'}} />
+          }
+            </span>
+             
 </div>
         </div>
         <Link to={`/single/${users.id}`}>
@@ -66,9 +77,9 @@ const Products = ({data, btn1, btn,isLoading}) => {
         <div className='container'>
                 <div className="katalog">
                 <div className="katalog_item">
-                    <h1>Популярные товары</h1>
+                    <h1>{title}</h1>
                 </div>
-                <div className="btn">
+                <div className="btn"> 
                     <div className="btn1">
                         <p>Все товары</p>
                     </div>

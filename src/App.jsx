@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home'
 import Katalog from './Pages/Каtalog/Каtalog'
 import Modul from './components/Modul/Modul'
 import SingleRoute from './Pages/SingleRoute/SingleRoute'
+import Wishlist from './Pages/Wishlist/Wishlist'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/catalog" element={<Katalog/>} />
       <Route path="/single/:id" element={<SingleRoute/>} />
+      <Route path="/wishlist" element={<Wishlist/>} />
     </Routes>
      
     </>
