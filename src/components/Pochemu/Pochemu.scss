@@ -55,6 +55,59 @@
 //    display: none;
 // }
 
+@media(max-width:900px){
+   .pochemu{
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+      gap: 20px;
+      .pochemu_all{
+         width: 420px;
+         height: 360px;
+         border: 1px solid #D9D9D9 ;
+         padding:40px 40px;
+          .img{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             width: 80px;
+             height: 80px;
+             border-radius: 10px;            
+             background: #454545;
+             .img_all{
+                
+             }
+             
+          }  
+          h1{
+             font-family: Manrope;
+             font-size: 20px;
+             font-weight: 700;
+             line-height: 26px;
+             text-align: left;
+             width: 214px;
+             height: 52px;
+             color: #454545;    
+             margin-top: 79px;         
+          } 
+          p{
+             width: 240px;
+             height: 42px;
+             font-family: Manrope;
+             font-size: 16px;
+             font-weight: 400;
+             line-height: 20.8px;
+             text-align: left;
+             color: #454545;
+             margin-top: 20px;
+                         
+          }  
+     }
+   }
+}
+
 
 @media(max-width:768px){
 
@@ -66,47 +119,47 @@
       padding: 40px 0;
       gap: 20px;
       .pochemu_all{
-          width: 310px;
-          height: 360px;
-          border: 1px solid #D9D9D9 ;
-          padding:40px 40px;
-           .img{
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 80px;
-              height: 80px;
-              border-radius: 10px;            
-              background: #454545;
-              .img_all{
-                 
-              }
-              
-           }  
-           h1{
-              font-family: Manrope;
-              font-size: 20px;
-              font-weight: 700;
-              line-height: 26px;
-              text-align: left;
-              width: 214px;
-              height: 52px;
-              color: #454545;    
-              margin-top: 79px;         
-           } 
-           p{
-              width: 240px;
-              height: 42px;
-              font-family: Manrope;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 20.8px;
-              text-align: left;
-              color: #454545;
-              margin-top: 20px;
-                          
-           }  
-      }
+         width: 310px;
+         height: 360px;
+         border: 1px solid #D9D9D9 ;
+         padding:40px 40px;
+          .img{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             width: 80px;
+             height: 80px;
+             border-radius: 10px;            
+             background: #454545;
+             .img_all{
+                
+             }
+             
+          }  
+          h1{
+             font-family: Manrope;
+             font-size: 20px;
+             font-weight: 700;
+             line-height: 26px;
+             text-align: left;
+             width: 214px;
+             height: 52px;
+             color: #454545;    
+             margin-top: 79px;         
+          } 
+          p{
+             width: 240px;
+             height: 42px;
+             font-family: Manrope;
+             font-size: 16px;
+             font-weight: 400;
+             line-height: 20.8px;
+             text-align: left;
+             color: #454545;
+             margin-top: 20px;
+                         
+          }  
+     }
   }
 }
 

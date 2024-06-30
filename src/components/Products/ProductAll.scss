@@ -77,10 +77,16 @@ text-decoration: line-through;
 .btn_all_list{
     display: none;
 }
-
+ @media(max-width:900px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+   margin-top: 82px;
+}
+ }
 
 @media(max-width:768px){
-.wrapper{
+  .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr ;
    margin-top: 82px;
@@ -149,8 +155,8 @@ text-decoration: line-through;
         grid-template-columns: 1fr 1fr;
          margin-top: 42px;
         .card{
-            width: 160px;
-            height: 260px;
+          width: 160px;
+          height: 260px;
             padding: 10px 16px;
            .img{
             display: flex;
