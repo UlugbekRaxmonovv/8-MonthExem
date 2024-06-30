@@ -6,11 +6,12 @@ import { useParams } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
 import Footer from '../../components/Footer/Footer';
 import { useGetProductByIdQuery } from '../../components/context/api/productApi';
+import LoadingSingle from '../../components/LoadingSingle/LoadingSingle';
 import ProductTop from '../../components/ProductTop/index'
 const SingleRoute = () => {
     const [count,setCount] = useState(1)
     const { id } = useParams();
-    const { data } = useGetProductByIdQuery(id);
+    const { data,isLoading } = useGetProductByIdQuery(id);
     const onclick = () =>{
         setCount(count + 1)
       }
@@ -22,6 +23,11 @@ const SingleRoute = () => {
       <>
       <ProductTop/>
         <div className='container'>
+         {
+            isLoading ? <LoadingSingle/>
+            :
+            <></>
+         }
              <div className="singleRoute">
              <div className="glavnaya">
                    <p>Главная</p> 

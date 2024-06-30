@@ -8,11 +8,12 @@ import Modul from '../Modul/Modul';
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import Single from '../Single/Single';
+import Loading from '../Loading/Loading';
 
 
 
 let Api_Url = "https://667fec3456c2c76b495a8d83.mockapi.io"
-const Products = ({data, btn1, btn }) => {
+const Products = ({data, btn1, btn,isLoading}) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [productDetails, setProductDetails] = useState(null);
     useEffect(() => {
@@ -76,6 +77,11 @@ const Products = ({data, btn1, btn }) => {
                     </div>
                 </div>
             </div>
+            {
+                isLoading ?
+                 <Loading count={8} /> : 
+                 <></>
+            }
             <div className="wrapper">
               {links}
             </div>

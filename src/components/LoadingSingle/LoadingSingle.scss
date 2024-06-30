@@ -1,0 +1,176 @@
+
+.skeleton__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px ;
+    flex-wrap: wrap;
+   
+    
+  }
+  
+  .skeleton__image {
+    width: 650px;
+    height: 650px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+  .app{
+    width: 595px;
+    height: 544px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+  .skeleton{
+    width: 595px;
+    height: 544px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+
+
+  .oll{
+    display: none;
+    gap: 5px;
+    margin-top: 50px;
+
+    
+  }
+  .skeleton__titler,
+  .skeleton__pricer,
+  .skeleton__pricer,
+  .skeleton__pricerr{
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 10px;
+  }
+
+
+
+
+  @media(max-width:990px){
+
+    .skeleton__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px ;
+        flex-wrap: wrap;
+       
+        
+      }
+      .oll{
+        display: none;
+        gap: 5px;
+        margin-top: 50px;
+    
+        
+      }
+  }
+
+
+
+
+  @media(max-width:400px){
+    .oll{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .skeleton__titler,
+    .skeleton__pricer,
+    .skeleton__pricer,
+    .skeleton__pricerr{
+      width: 80px;
+      height: 80px;
+      background: #ddd;
+      border-radius: 10px;
+    }
+    .skeleton__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: -50px ;
+        flex-wrap: wrap;
+       
+        
+      }
+      
+      .skeleton__image {
+        width: 368px;
+        height:300px;
+        background: #ddd;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+      .app{
+        width: 368px;
+        height: 368px;
+        background: #ddd;
+        border-radius: 10px;
+        margin-top: 80px;
+      }
+      .skeleton{
+        width: 368px;
+        height: 368px;
+        background: #ddd;
+        border-radius: 10px;
+        margin-top: 80px;
+      }
+    }
+
+    @media(max-width:360px){
+        .oll{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .skeleton__titler,
+        .skeleton__pricer,
+        .skeleton__pricer,
+        .skeleton__pricerr{
+          width: 70px;
+          height: 70px;
+          background: #ddd;
+          border-radius: 10px;
+        }
+        .skeleton__wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: -50px ;
+            flex-wrap: wrap;
+           
+            
+          }
+          
+          .skeleton__image {
+            width: 328px;
+            height: 328px;
+            background: #ddd;
+            border-radius: 10px;
+            margin-top: 80px;
+          }
+          .app{
+            width: 328px;
+            height: 328px;
+            background: #ddd;
+            border-radius: 10px;
+            margin-top: 80px;
+          }
+          .skeleton{
+            width: 328px;
+            height: 328px;
+            background: #ddd;
+            border-radius: 10px;
+            margin-top: 80px;
+          }
+        }
