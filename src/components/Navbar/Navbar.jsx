@@ -79,11 +79,11 @@ const Navbar = () => {
                       <Link to={'/'}>  <img src={rasm} alt="" /></Link>
                     </div>
                     <div className="logo_link_all">
-                            <Link >
+                            <Link   to={'wishlist'}>
                              <div className="wishlists">
                                 <div className="wishlist_all">
-                                <FaRegHeart  />
-                                <span className="span">1</span>
+                                <FaRegHeart/>
+                                <span className="span">{wishlistItems?.length}</span>
                                 </div>
                                 <div className="wishlist_all">
                                 <p>Избранное</p>
@@ -104,7 +104,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div className="logo_link_all">
-                            <Link>
+                            <Link   to={'korzinka'}>
                              <div className="wishlists">
                                 <div className="wishlist_all">
                                 <IoCartOutline />
@@ -176,7 +176,7 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div className="logo_link_all">
-                            <Link>
+                            <Link to={'korzinka'}>
                              <div className="wishlist">
                                 <div className="wishlist_all">
                                 <IoCartOutline />

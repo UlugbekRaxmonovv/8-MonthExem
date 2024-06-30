@@ -1,0 +1,316 @@
+.korzinka_all{
+    display: flex;
+    align-items: center;
+    padding: 48px 0;
+    gap: 6px;
+    .korzinka_all_row{
+        display: flex;
+        align-items: center;
+        a{
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            &:focus{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                 color: black;                
+            }
+        }
+    }
+}
+.al_h1{
+    position: relative;
+    h1{
+        font-family: Manrope;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 70.4px;
+        text-align: left;
+        width: 276px;
+        height: 70px;
+        color: #454545;
+        span{
+         position: absolute;
+         top: 25%;
+         padding: 0px 6px;
+         border-radius: 50%;
+         font-family: Manrope;
+         font-size: 12px;
+         font-weight: 600;
+         line-height: 16.39px;
+        text-align: center;
+         color: #FFFFFF;
+         background-color: red;
+         
+        }
+    }
+  
+}
+.korzinka_hammasi{
+    width: 1280px;
+    border-radius: 20px ;
+    background: #F2F2F2;
+    padding: 36px 46px; 
+    margin-top: 40px;
+.korzinka_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+    justify-content: space-between;
+    align-items: self-start;
+    border-bottom: 1px solid #000000;
+    padding: 26px 0;
+    .korzinka_row_link{
+        p{
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            
+        }
+        h5{
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            display: none;
+        }
+
+       .korzinka_all_List{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .photo{
+            p{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                color: #454545;
+                
+
+            }
+            .img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 15px;
+                background-color: white;
+                img{
+                    width: 49px;
+                    height: 61px;
+                   
+                 }
+            }
+           
+          
+        }
+        .photoa{
+            .pr{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                .pr1{
+                    p{
+                        width: 100px;
+                        height: 42px;
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.8px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                }
+            }
+        }
+       } 
+       .ink{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .ink_all{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+        .ink_allr{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px ;
+            border: 1px solid #454545
+        }
+        .delet{
+            margin-left: 20%;
+            font-size: 25px;
+            cursor: pointer;
+        }
+       }
+    }
+}
+}
+.korzinka_alls{
+    display: none;
+    .korzinka_all_row{
+        display: flex;
+        align-items: center;
+        a{
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            &:focus{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                 color: black;                
+            }
+        }
+    }
+}
+
+
+@media(max-width:360px){
+    .korzinka_all{
+        display: none;
+    }
+    .korzinka_alls{
+        display: flex;
+        align-items: center;
+        padding: 18px 0;
+        gap: 6px;
+
+    }
+    .al_h1{
+        position: relative;
+        h1{
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 30.8px;
+            text-align: left;            
+            width: 117px;
+            height: 31px;            
+            color: #454545;
+            span{
+             position: absolute;
+             top: 25%;
+             padding: 0px 6px;
+             border-radius: 50%;
+             font-family: Manrope;
+             font-size: 12px;
+             font-weight: 600;
+             line-height: 16.39px;
+            text-align: center;
+             color: #FFFFFF;
+             background-color: red;
+             
+            }
+        }
+      
+    }
+    .korzinka_hammasi{
+        width: 328px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 80px;
+    .korzinka_row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: self-start;
+        border-bottom: none;
+        padding: 26px 0;
+        margin-top: -80px;
+        .korzinka_row_link{
+            p{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                color: #454545;
+                
+            }
+            h5{
+                display: none;
+            }
+    
+           .korzinka_all_List{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: self-start;
+            .photo{
+                p{   
+                    display: none;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.86px;
+                    text-align: left;
+                    color: #454545;
+                    
+    
+                }
+                .img{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 15px;
+                    background-color: white;
+                    img{
+                        width: 29px;
+                        height: 36px;                       
+                     }
+                }
+               
+             
+            }
+            .photoa{
+                .pr{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    .pr1{
+                        p{
+                            width: 174px;
+                            height: 42px;                            
+                            
+                        }
+                    }
+                }
+            }
+           }
+        }
+    }
+    } 
+}
