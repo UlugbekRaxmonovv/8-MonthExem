@@ -72,7 +72,7 @@ const SingleRoute = () => {
                                 <button  disabled={count <= 0} onClick={go}>-</button>
                               </div>
                               <div className="in_al">
-                               <span>{count}</span>
+                               <span style={{color:"black"}}>{count}</span>
                               </div>
                               <div className="in_al">
                                 <button onClick={onclick}>+</button>
