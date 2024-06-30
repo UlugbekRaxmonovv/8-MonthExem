@@ -1,7 +1,9 @@
+.all_Oll{
+    padding: 50px 0;
+}
 .korzinka_all{
     display: flex;
     align-items: center;
-    padding: 48px 0;
     gap: 6px;
     .korzinka_all_row{
         display: flex;
@@ -35,6 +37,7 @@
         width: 276px;
         height: 70px;
         color: #454545;
+        margin-top: 20px;
         span{
          position: absolute;
          top: 25%;
@@ -83,7 +86,7 @@
             line-height: 21.86px;
             text-align: left;
             color: #454545;
-            display: none;
+          
         }
 
        .korzinka_all_List{
@@ -194,7 +197,602 @@
         }
     }
 }
+.korzinka_column{
+    width: 1280px;
+    height: 600px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+    .korzinka_column_alt{
+        padding: 45px 48px;
+        form{
+            h1{
+                font-family: Manrope;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 35.2px;
+                text-align: left;
+                color: #454545;
+                
+            }
+            .input{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 31px 0;
+                border-bottom: 1px solid #000000;
+                .input_all{
+                    display: flex;
+                    align-items: center;
+                    width: 373px;
+                    height: 49.03px;
+                    border-radius: 100px ;
+                    border: 1px solid #454545;
+                    padding: 0 10px;
+                    input{
+                        border: none ;
+                        outline: none;
+                        background: #F2F2F2;
+                        ::placeholder{
+                            font-family: Manrope;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.8px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                      
+                    }
+                }
+            }
+            .input_link{
+                .radio_list{
+                    display: none;
+                    align-items: center;
+                    gap: 10px;
+                    .radio{
+                        span{
+                            padding: 0 10px;
+                            font-family: Manrope;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.8px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                    }
+                }
+                h1{
+                    font-family: Manrope;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 35.2px;
+                    text-align: left;
+                    color: #454545;
+                    height: 33px;
+                    padding: 37px 0;
+                    
+                }
+                .input_list{
+                    display: flex;
+                    align-items: center;
+                    width: 767px;
+                    height: 49.03px;
+                    border-radius: 100px;
+                    border: 1px solid #454545;
+                    padding: 0 12px;
+                    margin-top: 31px;
+                    input{
+                        border: none;
+                        outline: none;
+                        background: #F2F2F2;
+                        ::placeholder{
+                            font-family: Manrope;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.8px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                    }   
+                               
+                }
+                textarea{
+                    background: #F2F2F2 !important;  
+                    margin-top: 31px;
+                    padding: 20px 20px;
+                    width: 767px;
+                    height: 150.87px;
+                    border-radius: 26px;
+                    border: none;
+                    resize: none;
+                    outline: none;
+                    border: 1px solid #454545;
+                    ::placeholder{
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.8px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                }   
+            }
+        }
+    }
+    
+}
+.kupon{
+    width: 1280px;
+    height: 361px;
+    border-radius: 20px;
+    background: #F2F2F2; 
+    margin-top: 58px ;
+    .kupon_all{
+        padding: 48px 48px;
+        .radio_list{
+            display: none;
+            align-items: center;
+            gap: 10px;
+            .radio{
+                span{
+                    padding: 0 10px;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20.8px;
+                    text-align: left;
+                    color: #454545;
+                    
+                }
+            }
+        }
+       h5{
+        font-family: Manrope;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35.2px;
+        text-align: left;
+        color: #454545;
+        
+       } 
+       .kupon_hammasi{
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+        gap: 30px;
+        .kupon_right{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .kupon_pric{
+                input{
+                    border: none;
+                    outline: none;
+                    background: #F2F2F2; 
+                    ::placeholder{
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.8px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                }
+            }
+          
+        }
+       }
+       .kupon_item{
+      
+        h6{
+            font-family: Manrope;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 26.4px;
+            text-align: left;
+            color: #454545;
+            margin-top: 69px;
+            
+        }
+        .kupon_btn{
+            display: flex;
+            align-items: center;
+            margin-top: 28px;
+            gap: 24px;
+            .lupon_btn1{
+                button{
+                    width: 324px;
+                    height: 50px;
+                    border-radius: 100px;
+                    background: #454545;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.86px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    border: none;
+                    
+                    
+                }
+            }
+        }
+       }
+    }
+}
 
+
+
+@media(max-width:900px){
+    .korzinka_hammasi{
+        max-width: 868px;
+        width: 100%;
+        border-radius: 20px ;
+        background: #F2F2F2;
+        padding: 36px 46px; 
+        margin-top: 40px;
+    .korzinka_row{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 80px;
+        justify-content: space-between;
+        align-items: self-start;
+        border-bottom: 1px solid #000000;
+        padding: 26px 0;
+    }
+    }   
+    .korzinka_column{
+        max-width: 868px;
+        width: 100%;
+        height: 636px;        
+        margin-top: 20px;
+        .korzinka_column_alt{
+            padding: 20px 16px;
+            form{
+                h1{
+                    font-family: Manrope;
+                    font-size: 38px;
+                    font-weight: 700;
+                    line-height: 30.8px;
+                    text-align: left;                    
+                    color: #454545;
+                    
+                }
+                .input{
+                    display: flex;
+                    align-items: center;
+                    justify-content:center !important;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding: 40px 0;
+                
+                    .input_all{
+                        width: 368px;
+                        height: 52px;
+                        padding: 0 10px;
+                     
+                    }
+                }
+                .input_link{
+                    .radio_list{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 30px 0;
+                   
+                    }
+                    h1{
+                        font-family: Manrope;
+                        font-size: 38px;
+                        font-weight: 700;
+                        line-height: 30.8px;
+                        text-align: left;                        
+                        color: #454545;
+                        height: 33px;
+                        padding: 15px 0;
+                        
+                    }
+                    .input_list{
+                        max-width: 768px;
+                        width: 100%;
+                        height: 52px;
+                        margin-top: -10px;
+                                   
+                    }
+                    textarea{
+                        background: #F2F2F2 !important;  
+                        margin-top: 11px;
+                        padding: 20px 20px;
+                        max-width: 768px;
+                        width: 100%;
+                        height: 160.87px;
+
+                    }   
+                }
+            }
+        }
+        
+    }
+    .kupon{
+        max-width: 868px;
+        width: 100%;
+        height: 400px;
+        border-radius: 20px;
+        background: #F2F2F2; 
+        margin-top: 58px ;
+           .kupon_item{
+            .kupon_btn{
+                display: flex;
+                align-items: center;
+                margin-top: 28px;
+                flex-wrap: wrap;
+                gap: 24px;
+             
+            }
+           }
+        }
+}
+
+@media(max-width:768px){
+
+
+    .korzinka_column{
+        width: 732px;
+        height: 650px;
+        .korzinka_column_alt{
+            padding: 45px 48px;
+            form{
+                h1{
+                    font-family: Manrope;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 35.2px;
+                    text-align: left;
+                    color: #454545;
+                    
+                }
+                .input{
+                    .input_all{
+                        width: 195px;
+                  
+                    }
+                }
+                .input_link{
+                    .input_list{
+                       
+                        width: 600px;             
+                    }
+                    textarea{
+                        width: 600px;
+                        height: 150.87px;
+                    }   
+                }
+            }
+        }
+        
+    }
+    .kupon{
+        width: 732px;
+        height: 400px;
+        border-radius: 20px;
+        background: #F2F2F2; 
+        margin-top: 58px ;
+           .kupon_item{
+            .kupon_btn{
+                display: flex;
+                align-items: center;
+                margin-top: 28px;
+                flex-wrap: wrap;
+                gap: 24px;
+             
+            }
+           }
+        }
+    }  
+
+@media(max-width:400px){
+    .korzinka_all{
+        display: none;
+    }
+    .korzinka_alls{
+        display: flex;
+        align-items: center;
+        padding: 18px 0;
+        gap: 6px;
+
+    }
+    .al_h1{
+        position: relative;
+        h1{
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 30.8px;
+            text-align: left;            
+            width: 117px;
+            height: 31px;            
+            color: #454545;
+            span{
+             position: absolute;
+             top: 25%;
+             padding: 0px 6px;
+             border-radius: 50%;
+             font-family: Manrope;
+             font-size: 12px;
+             font-weight: 600;
+             line-height: 16.39px;
+            text-align: center;
+             color: #FFFFFF;
+             background-color: red;
+             
+            }
+        }
+      
+    }
+    .korzinka_hammasi{
+        width: 368px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 80px;
+    .korzinka_row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: self-start;
+        border-bottom: none;
+        padding: 26px 0;
+        margin-top: -80px;
+        .korzinka_row_link{
+            p{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                color: #454545;
+                
+            }
+            h5{
+                display: none;
+            }
+    
+           .korzinka_all_List{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: self-start;
+            .photo{
+                p{   
+                    display: none;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 21.86px;
+                    text-align: left;
+                    color: #454545;
+                    
+    
+                }
+                .img{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 15px;
+                    background-color: white;
+                    img{
+                        width: 29px;
+                        height: 36px;                       
+                     }
+                }
+               
+             
+            }
+            .photoa{
+                .pr{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    .pr1{
+                        p{
+                            width: 174px;
+                            height: 42px;                            
+                            
+                        }
+                    }
+                }
+            }
+           }
+        }
+    }
+    } 
+    .korzinka_column{
+        width: 368px;
+        height: 636px;        
+        margin-top: 20px;
+        .korzinka_column_alt{
+            padding: 20px 16px;
+            form{
+                h1{
+                    font-family: Manrope;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 30.8px;
+                    text-align: left;                    
+                    color: #454545;
+                    
+                }
+                .input{
+                    display: flex;
+                    align-items: center;
+                    justify-content:center !important;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding: 20px 0;
+                
+                    .input_all{
+                        width: 368px;
+                        height: 52px;
+                        padding: 0 10px;
+                     
+                    }
+                }
+                .input_link{
+                    .radio_list{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 30px 0;
+                   
+                    }
+                    h1{
+                        font-family: Manrope;
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 30.8px;
+                        text-align: left;                        
+                        color: #454545;
+                        height: 33px;
+                        padding: 15px 0;
+                        
+                    }
+                    .input_list{
+                        width: 338px;
+                        height: 52px;
+                        margin-top: -10px;
+                                   
+                    }
+                    textarea{
+                        background: #F2F2F2 !important;  
+                        margin-top: 11px;
+                        padding: 20px 20px;
+                        width: 338px;
+                        height: 160.87px;
+
+                    }   
+                }
+            }
+        }
+        
+    }
+    .kupon{
+        width: 368px;
+        height: 422px;        
+        border-radius: 20px;
+        background: #F2F2F2; 
+        margin-top: 18px ;
+    
+    }
+}
 
 @media(max-width:360px){
     .korzinka_all{
@@ -313,4 +911,159 @@
         }
     }
     } 
+    .korzinka_column{
+        width: 328px;
+        height: 636px;        
+        margin-top: 20px;
+        .korzinka_column_alt{
+            padding: 20px 16px;
+            form{
+                h1{
+                    font-family: Manrope;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 30.8px;
+                    text-align: left;                    
+                    color: #454545;
+                    
+                }
+                .input{
+                    display: flex;
+                    align-items: center;
+                    justify-content:center !important;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding: 20px 0;
+                
+                    .input_all{
+                        width: 288px;
+                        height: 52px;
+                        padding: 0 10px;
+                     
+                    }
+                }
+                .input_link{
+                    .radio_list{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 30px 0;
+                   
+                    }
+                    h1{
+                        font-family: Manrope;
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 30.8px;
+                        text-align: left;                        
+                        color: #454545;
+                        height: 33px;
+                        padding: 15px 0;
+                        
+                    }
+                    .input_list{
+                        width: 288px;
+                        height: 52px;
+                        margin-top: -10px;
+                                   
+                    }
+                    textarea{
+                        background: #F2F2F2 !important;  
+                        margin-top: 11px;
+                        padding: 20px 20px;
+                        width: 288px;
+                        height: 140.87px;
+
+                    }   
+                }
+            }
+        }
+        
+    }
+    .kupon{
+        width: 328px;
+        height: 422px;        
+        border-radius: 20px;
+        background: #F2F2F2; 
+        margin-top: 18px ;
+        .kupon_all{
+            padding: 20px 20px;
+            .radio_list{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+                .radio{
+                    span{
+                        padding: 0 10px;
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.8px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                }
+            }
+           h5{
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 30.8px;
+            text-align: left;            
+            color: #454545;
+            
+           } 
+           .kupon_hammasi{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            gap: 30px;
+            .kupon_right{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .kupon_pric{
+                    input{
+                        border: none;
+                        outline: none;
+                        background: #F2F2F2; 
+                        ::placeholder{
+                            font-family: Manrope;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20.8px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                    }
+                }
+              
+            }
+           }
+           .kupon_item{
+       
+            h6{
+                margin-top:29px;
+                
+            }
+            .kupon_btn{
+                display: flex;
+                align-items: center;
+                margin-top: 28px;
+                flex-wrap: wrap;
+                gap: 24px;
+                .lupon_btn1{
+                    button{
+                        width: 286px;
+                        height: 50px;
+                    }
+                }
+            }
+           }
+        }
+    }
 }
