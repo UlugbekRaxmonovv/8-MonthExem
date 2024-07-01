@@ -14,6 +14,11 @@ import rasm9 from '../../assets/img/katta.png'
 import rasm10 from '../../assets/img/katta1.png'
 import { NavLink } from 'react-router-dom';
 import './Katalog.scss'
+import { VscArrowRight } from 'react-icons/vsc';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 const Katalog = () => {
     let data = [
         {
@@ -103,7 +108,7 @@ const Katalog = () => {
     ))
     return (
         <div className='container'>
-              <div className="korzinka_all">
+              <div className="korzinka_allsy">
             <div className="korzinka_all_row">
                 <NavLink to={'/'}>
                 Главная
@@ -118,10 +123,46 @@ const Katalog = () => {
                 </NavLink>
             </div>
              </div>
-           <div className="grids_All">
+           <div className="grid">
 {links}
 </div>
+<Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+            360: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
 
+<SwiperSlide><div className="grids">
+{links}
+
+</div>
+</SwiperSlide>
+
+       
+      </Swiper>
+   
 
 <div className="katalog_hammasi_column">
 <div className="katalog_link_item">

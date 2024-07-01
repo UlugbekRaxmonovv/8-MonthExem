@@ -1,9 +1,27 @@
-.grids_All{
-    padding: 40px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;;
-    gap: 20px;
-
+.korzinka_allsy{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    .korzinka_all_row{
+        display: flex;
+        align-items: center;
+        a{
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21.86px;
+            text-align: left;
+            color: #454545;
+            &:focus{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                text-align: left;
+                 color: black;                
+            }
+        }
+    }
 }
 .katalog_hammasi_column{
     display: grid;
@@ -59,37 +77,83 @@
     }
 }
 
-@media(max-width:360px){
-    .grids_All{
-        padding: 40px 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;;
-        gap: 10px;
-        .item2 {
-             display: grid !important;
-             grid-template-columns: 1fr;
-            align-items: center;
-            justify-content: center;
-            grid-row: 1 / span 1;
-            height: 170px;
-            img{
-                width: 73px;
-                height: 91px;
-                object-fit: contain;
-            }
-    
+@media(max-width:768px){
+    .katalog_hammasi_column{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 16px;
     }
- 
-     
 }
+
+@media(max-width:400px){
 .katalog_hammasi_column{
     display: grid;
     grid-template-columns: 1fr ;
     gap: 20px;
-    .katalog_link_item{
-        width: 328px;
+    padding: 0 16px;
+    .katalog_link_item:nth-child(1){
+        width: 175px;
+        height: 190px; 
+        padding: 20px 20px;
+        margin-top: -350px;
+        margin-left: 53%;
+       
+        .katalog_link_item_list{
+            h1{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 17.6px;
+                text-align: left;                    
+                color: #454545;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-top: 15px;
+                
+            }
+            .grid-item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: -15%;
+                .item5{
+                    p{
+                        font-family: Manrope;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 15.4px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+            }
+            img{
+                width: 81px;
+                height: 92px;            
+                object-fit: contain;
+                margin-left: -170%;
+                margin-top: 30px;
+                display: none;
+                
+            }
+        }
+        
+    }
+    .katalog_link_item:nth-child(2){
+        width: 368px;
         height: 190px;
         padding: 20px 20px;
+        margin-top: -80px;
+        // margin-left: -3%;
         .katalog_link_item_list{
             h1{
                 font-family: Manrope;
@@ -124,6 +188,7 @@
                 width: 174.41px;
                 height: 42.32px;          
                object-fit: contain;
+               margin-top: 50px;
                 
             }
         }
@@ -131,3 +196,103 @@
     }
 }
 }
+@media(max-width:360px){
+    .katalog_hammasi_column{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 20px;
+        .katalog_link_item:nth-child(1){
+            width: 160px;
+            height: 190px;    
+            padding: 20px 20px;
+            margin-top: -350px;
+            margin-left: 51%;
+           
+            .katalog_link_item_list{
+                h1{
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 17.6px;
+                    text-align: left;                    
+                    color: #454545;
+                    
+                }
+                .grid-item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: -15%;
+                    .item5{
+                        p{
+                            font-family: Manrope;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 15.4px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                        svg{
+                            font-size: 20px;
+                        }
+                    }
+                }
+                img{
+                    width: 81px;
+                    height: 92px;            
+                    object-fit: contain;
+                    margin-left: -170%;
+                    margin-top: 30px;
+                    
+                }
+            }
+            
+        }
+        .katalog_link_item:nth-child(2){
+            width: 328px;
+            height: 190px;
+            padding: 20px 20px;
+            margin-top: -80px;
+            .katalog_link_item_list{
+                h1{
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 17.6px;
+                    text-align: left;                    
+                    color: #454545;
+                    
+                }
+                .grid-item{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-left: -15%;
+                    .item5{
+                        p{
+                            font-family: Manrope;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 15.4px;
+                            text-align: left;
+                            color: #454545;
+                            
+                        }
+                        svg{
+                            font-size: 20px;
+                        }
+                    }
+                }
+                img{
+                    width: 174.41px;
+                    height: 42.32px;          
+                   object-fit: contain;
+                   margin-top: 50px;
+                    
+                }
+            }
+            
+        }
+    }
+    }
