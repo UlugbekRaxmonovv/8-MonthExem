@@ -11,6 +11,8 @@ import Korzinka from './Pages/Коrzinka/Коrzinka'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Blog from './Pages/Blog/Blog'
+import NotFound from './Pages/NotFound/NotFound'
+import Kontact from './Pages/Коntact/Коntact'
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
       <Route path="/wishlist" element={<Wishlist/>} />
       <Route path="/korzinka" element={<Korzinka/>} />
       <Route path="/blog" element={<Blog/>} />
+      <Route path="*" element={<NotFound/>} />
+      <Route path='/contact' element={<Kontact/>}/>
     </Routes>
      
     </>

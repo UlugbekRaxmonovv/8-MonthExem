@@ -36,7 +36,8 @@ const Navbar = () => {
                             <a href="" className="">Гарантии</a>
                         </li>
                         <li>
-                            <a href="" className="">Контакты</a>
+                            <Link to={'contact'}>Контакты</Link>
+                           
                         </li>
                     
                         <li>
