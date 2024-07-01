@@ -59,6 +59,7 @@ const Korzinka = () => {
       </div>
     </div>
     )) 
+   
     return (
      <>
         <div className='container all_Oll'>
@@ -112,9 +113,8 @@ const Korzinka = () => {
             </div>
              </div>
            <div className="al_h1">
-           <h1>Корзина  <span>1</span></h1>
+           <h1>Корзина  <span>{cartItems?.length}</span></h1>
            </div>
-
 
     <div className="korzinka_hammasi">
     <div className="korzinka_row">

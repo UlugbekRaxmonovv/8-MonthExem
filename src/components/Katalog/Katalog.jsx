@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 const Katalog = () => {
 
     let data = [
@@ -86,6 +87,7 @@ const Katalog = () => {
                 <div className="katalog_item">
                     <h1>Каталог</h1>
                 </div>
+                <Link to={'catalog'}>
                 <div className="btn">
                     <div className="btn1">
                         <p>Весь каталог</p>
@@ -94,6 +96,8 @@ const Katalog = () => {
                     <VscArrowRight />
                     </div>
                 </div>
+                </Link>
+               
             </div>
 <div className="grid">
 {links}
@@ -132,6 +136,7 @@ const Katalog = () => {
 {links}
 
 </div>
+<Link to={'catalog'}>
 <div className="btn4">
                   <div className="btnt">
                   <div className="btn">
@@ -140,6 +145,7 @@ const Katalog = () => {
                     <div className="btn1">
                     <VscArrowRight />
                     </div></div>                </div>
+</Link>
 
 </SwiperSlide>
 

@@ -19,6 +19,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import Blog from '../../components/Blog/Blog'
+import Brendlar from '../../components/Brendlar/Brendlar';
+import Footer from '../../components/Footer/Footer'
 const Katalog = () => {
     let data = [
         {
@@ -107,6 +110,7 @@ const Katalog = () => {
 </div>
     ))
     return (
+     <>
         <div className='container'>
               <div className="korzinka_allsy">
             <div className="korzinka_all_row">
@@ -122,6 +126,9 @@ const Katalog = () => {
                 Каталог
                 </NavLink>
             </div>
+             </div>
+             <div className="h_teg">
+              <h1>Каталог</h1>
              </div>
            <div className="grid">
 {links}
@@ -198,8 +205,15 @@ const Katalog = () => {
 </div>
 </div>
 </div>
+<Brendlar/>
+
+<Blog />
+
+
 
         </div>
+        <Footer />
+     </>
     );
 }
 

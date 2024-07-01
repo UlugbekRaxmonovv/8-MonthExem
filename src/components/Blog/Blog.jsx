@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 let data = [
     {
@@ -74,6 +75,7 @@ const Blog = () => {
                 <div className="katalog_item">
                     <h1>Блог</h1>
                 </div>
+                <Link to={'blog'}>
                 <div className="btn">
                     <div className="btn1">
                         <p>Перейти в блог</p>
@@ -82,6 +84,8 @@ const Blog = () => {
                     <VscArrowRight />
                     </div>
                 </div>
+                </Link>
+               
             </div>
             <div className="blog" >
               {links}

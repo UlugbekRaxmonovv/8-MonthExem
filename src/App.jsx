@@ -10,6 +10,7 @@ import Wishlist from './Pages/Wishlist/Wishlist'
 import Korzinka from './Pages/Коrzinka/Коrzinka'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blog from './Pages/Blog/Blog'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route path="/single/:id" element={<SingleRoute/>} />
       <Route path="/wishlist" element={<Wishlist/>} />
       <Route path="/korzinka" element={<Korzinka/>} />
+      <Route path="/blog" element={<Blog/>} />
     </Routes>
      
     </>

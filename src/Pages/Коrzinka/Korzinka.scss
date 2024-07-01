@@ -1,5 +1,5 @@
 .all_Oll{
-    padding: 50px 0;
+    padding: 50px 16px;
 }
 .korzinka_all{
     display: flex;
@@ -776,7 +776,7 @@
                         margin-top: 11px;
                         padding: 20px 20px;
                         width: 338px;
-                        height: 160.87px;
+                        height: 120.87px;
 
                     }   
                 }
@@ -790,9 +790,63 @@
         border-radius: 20px;
         background: #F2F2F2; 
         margin-top: 18px ;
+        .kupon_all{
+            padding: 20px 20px;
+            .radio_list{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+                .radio{
+                    span{
+                        padding: 0 10px;
+                        font-family: Manrope;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20.8px;
+                        text-align: left;
+                        color: #454545;
+                        
+                    }
+                }
+            }
+           h5{
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 30.8px;
+            text-align: left;            
+            color: #454545;
+            
+           } 
+           .kupon_hammasi{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            gap: 30px;
+           }
+           .kupon_item{
+       
+            h6{
+                margin-top:29px;
+                
+            }
+            .kupon_btn{
+                .lupon_btn1{
+                    button{
+                        width: 325px;
+                        height: 50px;
+                    }
+                }
+            }
+           }
+        }
+    }
+
     
     }
-}
+
 
 @media(max-width:360px){
     .korzinka_all{

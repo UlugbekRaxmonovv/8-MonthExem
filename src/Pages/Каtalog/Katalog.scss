@@ -27,6 +27,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding: 40px 0;
+    margin-top: -40px;
     .katalog_link_item{
         width: 640px;
         height: 250px;
@@ -76,6 +78,18 @@
         
     }
 }
+.h_teg{
+    h1{
+        font-family: Manrope;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 70.4px;
+        text-align: left;
+        color: #454545;
+        margin-top: 20px;
+        
+    }
+}
 
 @media(max-width:768px){
     .katalog_hammasi_column{
@@ -89,6 +103,19 @@
 }
 
 @media(max-width:400px){
+    .h_teg{
+        h1{
+            font-family: Manrope;
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 38.25px;
+            text-align: left;            
+            color: #454545;
+            margin-top: 20px;
+            
+        }
+    }
 .katalog_hammasi_column{
     display: grid;
     grid-template-columns: 1fr ;
@@ -205,7 +232,7 @@
             width: 160px;
             height: 190px;    
             padding: 20px 20px;
-            margin-top: -350px;
+            margin-top: -270px;
             margin-left: 51%;
            
             .katalog_link_item_list{
@@ -253,7 +280,7 @@
             width: 328px;
             height: 190px;
             padding: 20px 20px;
-            margin-top: -80px;
+            margin-top: -40px;
             .katalog_link_item_list{
                 h1{
                     font-family: Manrope;
@@ -292,6 +319,19 @@
                     
                 }
             }
+            
+        }
+    }
+    .h_teg{
+        h1{
+            font-family: Manrope;
+            font-family: Manrope;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 38.25px;
+            text-align: left;            
+            color: #454545;
+            margin-top: 20px;
             
         }
     }

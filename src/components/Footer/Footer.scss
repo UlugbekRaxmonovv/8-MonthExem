@@ -93,7 +93,92 @@ footer{
     }
     }  
 }
-
+@media(max-width:400px){
+    footer{
+        background: #F2F2F2;
+        padding: 0 16px;
+    .footir_all{
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 80px 0;
+         ul{
+            img{
+                width: 150px;
+                height: 24px;
+                object-fit: contain;
+            }
+            .p{
+                p{
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 21.86px;
+                    text-align: left;                    
+                    color: #454545;
+                    margin-top: 24px;
+                    
+                }
+            }
+            .img{
+                width: 136px;
+                height: 24px;
+               object-fit: contain;
+               margin-top: 9px;
+                
+            }
+            h5{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 21.86px;
+                text-align: left;
+                color: #454545;
+                padding: 10px 0;
+                
+            }
+    
+            h1{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32.78px;
+                text-align: left;
+                color: #454545;
+                margin-bottom: 32px;
+                margin-top: 1px;
+                
+            }
+            li a{
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 40.86px;
+                text-align: left;
+                color: #454545;
+               
+                
+            }
+          
+         }
+         .icon_alli_list{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 0;
+            .icon_all_row{
+                img{
+                    width: 36px;
+                    height: 36px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    }
+    
+}
 @media(max-width:360px){
     footer{
         background: #F2F2F2;
@@ -136,7 +221,7 @@ footer{
                 line-height: 21.86px;
                 text-align: left;
                 color: #454545;
-                padding: 25px 0;
+                padding: 10px 0;
                 
             }
     
@@ -148,14 +233,14 @@ footer{
                 text-align: left;
                 color: #454545;
                 margin-bottom: 32px;
-                margin-top: 20px;
+                margin-top: 1px;
                 
             }
             li a{
                 font-family: Manrope;
                 font-size: 16px;
                 font-weight: 600;
-                line-height: 51.86px;
+                line-height: 40.86px;
                 text-align: left;
                 color: #454545;
                
@@ -167,7 +252,7 @@ footer{
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 35px 0;
+            padding: 20px 0;
             .icon_all_row{
                 img{
                     width: 36px;
