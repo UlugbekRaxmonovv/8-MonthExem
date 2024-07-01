@@ -45,7 +45,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
          <div className="img_row">
             <span onClick={() => dispatch(toggleHeart(users))}>
             {
-            wishlist?.some(item => item.id === users.id) ? <FaHeart  style={{color:'red',fontSize:'20px'}} />
+            wishlist?.some(item => item.id === users.id) ? <FaHeart  style={{fontSize:'20px'}} />
             : <CiHeart    style={{fontSize:'20px'}} />
           }
             </span>
