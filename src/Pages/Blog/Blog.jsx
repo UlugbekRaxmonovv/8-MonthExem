@@ -6,6 +6,7 @@ import rasm from '../../assets/img/blog.png'
 import rasm1 from '../../assets/img/blog1.png'
 import rasm2 from '../../assets/img/blog2.png'
 import Footer from '../../components/Footer/Footer'
+import ProductTop from '../../components/ProductTop/index'
 import './Blog.scss'
 let data = [
     {
@@ -73,7 +74,7 @@ let data = [
 
 let links = data?.map((el,inx) =>(
   <>
-  
+  <ProductTop/>
   <div className="blog_all" key={inx.id}>
     <div className="blog_img">
         <div className="blog_img_row">

@@ -8,10 +8,12 @@ import Blog from '../../components/Blog/Blog';
 import Production from '../../components/Production/Production';
 import Footer from '../../components/Footer/Footer';
 import { useGetProductsQuery } from '../../components/context/api/productApi'; 
+import ProductTop from '../../components/ProductTop/index'
 const Home = () => {
     const { data,isError,isFetching,isLoading,isSuccess } = useGetProductsQuery();
     return (
         <div>
+            <ProductTop/>
             <Main /> 
             <Katalog/>
             <Pochemu /> 

@@ -7,6 +7,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import Footer from '../../components/Footer/Footer'
 import { useSelector,useDispatch } from 'react-redux';
 import { RiDeleteBinFill } from "react-icons/ri";
+import ProductTop from '../../components/ProductTop/index'
 import { decrementCart,incremented,removeFromCart,deleteAllCart } from '../../components/context/slices/cartSlice';
 const Korzinka = () => {
     const dispatch = useDispatch();
@@ -63,6 +64,7 @@ const Korzinka = () => {
     return (
      <>
         <div className='container all_Oll'>
+         <ProductTop/>
              <div className="korzinka_all">
             <div className="korzinka_all_row">
                 <NavLink to={'/'}>

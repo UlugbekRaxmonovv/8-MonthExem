@@ -220,7 +220,8 @@ const Blog = () => {
 
             </SwiperSlide>
       </Swiper>
-      <div className="rows">
+     <Link to={'blog'}>
+     <div className="rows">
          <div className="col">
            <div className="btn1">
                         <p>Перейти в блог</p>
@@ -230,6 +231,7 @@ const Blog = () => {
                     </div>
            </div>
          </div>  
+     </Link>
         </div>
     );
 }
