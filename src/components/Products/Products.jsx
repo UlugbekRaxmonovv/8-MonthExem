@@ -13,6 +13,7 @@ import {useDispatch,useSelector } from 'react-redux';
 import {toggleHeart} from '../../components/context/slices/wishlistSlice'
 import { addToCart } from '../context/slices/cartSlice';
 import { CiHeart } from 'react-icons/ci';
+import TavarProducts from '../../Pages/TavarProducts/TavarProducts';
 
 
 
@@ -80,6 +81,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
                 <div className="katalog_item">
                     <h1>{title}</h1>
                 </div>
+                <Link to={'/tavar-products'}>
                 <div className="btn"> 
                     <div className="btn1">
                         <p>Все товары</p>
@@ -88,6 +90,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
                     <VscArrowRight />
                     </div>
                 </div>
+                </Link>
             </div>
             {
                 isLoading ?
@@ -97,7 +100,8 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
             <div className="wrapper">
               {links}
             </div>
-            <div className="btn_all_list">
+          <Link to={'/tavar-products'}>
+          <div className="btn_all_list">
                     <div className="btn1">
                         <p>Все товары</p>
                     </div>
@@ -105,6 +109,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
                     <VscArrowRight />
                     </div>
                 </div>
+          </Link>
                 {productDetails && (
                 <Modul btn1={removeProductDetails}>
                     <Single detail={productDetails} />

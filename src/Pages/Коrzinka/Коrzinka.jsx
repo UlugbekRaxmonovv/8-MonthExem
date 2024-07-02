@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Korzinka.scss'
 import { NavLink } from 'react-router-dom';
 import rasm from '../../assets/img/blog.png'
@@ -10,6 +10,8 @@ import { RiDeleteBinFill } from "react-icons/ri";
 import ProductTop from '../../components/ProductTop/index'
 import { decrementCart,incremented,removeFromCart,deleteAllCart } from '../../components/context/slices/cartSlice';
 const Korzinka = () => {
+   const [kupon,setKupon] = useState()
+    const [name,setName] = useState('')
     const dispatch = useDispatch();
     const  cartItems  = useSelector(state => state.cart.value);
     let javob1 =cartItems?.reduce((a,b) => a + (b.price  * b.quantity),0)
@@ -61,6 +63,10 @@ const Korzinka = () => {
     </div>
     )) 
    
+
+    const HandleKupon = () =>{
+      setKupon( name == "iPhone15" ? javob * 0.2 : 0 ) 
+    }
     return (
      <>
         <div className='container all_Oll'>
@@ -192,10 +198,10 @@ const Korzinka = () => {
  <div className="kupon_hammasi">
  <div className="kupon_right">
       <div className="kupon_pric">
-      <input type="text"  placeholder='Товары.............................................'/>
+      <input type="text"  value={name}  onChange={(e) => setName(e.target.value)} placeholder='iPhone15'/>
       </div>
       <div className="kupon_pric">
-         <p>12 300₽</p>
+         <p>{(javob - kupon)}</p>
       </div>
       </div>
       <div className="kupon_right">
@@ -203,7 +209,7 @@ const Korzinka = () => {
       <input type="text"  placeholder='Доставка..............................................'/>
       </div>
       <div className="kupon_pric">
-         <p>12 300₽</p>
+         <p>{kupon}</p>
       </div>
       </div>
  </div>
@@ -226,7 +232,7 @@ const Korzinka = () => {
 
    <div className="kupon_btn">
       <div className="lupon_btn1">
-         <button>Купить</button>
+         <button onClick={HandleKupon}>Купить</button>
       </div>
       <div className="lupon_btn1">
         <input type="radio" /> <span>Я согласен наобработку моих персональных данных</span>

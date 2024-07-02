@@ -10,8 +10,16 @@ import { TbMenuDeep } from "react-icons/tb";
 import { VscChromeClose } from "react-icons/vsc";
 import './Navbar.scss'
 import { useSelector } from 'react-redux';
+import { Navigate,useLocation } from 'react-router-dom';
+import Modul from '../../components/Modul/Modul'
+import Zvonok from '../Zvonok/Zvonok';
 
 const Navbar = () => {
+    const [zvonok, setZvonok] = useState(false);
+    let {pathname} = useLocation();
+    if(pathname.includes('/login') || pathname.includes('/admin')){
+        return <></>;
+    }
     const [menu, setMenu] = useState(false);
     const wishlistItems = useSelector((state) => state.wishlist.value);
     const  cartItems  = useSelector(state => state.cart.value);
@@ -54,18 +62,36 @@ const Navbar = () => {
                             </div>
                           </Link>
                         <div className="ul_list_ab">
-                            <p>8 (800) 890-46-56</p>
+                        <p onClick={() => setZvonok(true)}>Заказать звонок</p>
+                        {
+                                zvonok ? 
+                                <Modul maxWidth="800px" width='100%' btn1={setZvonok}>
+                                       <Zvonok setZvonok={setZvonok}/>
+                                    </Modul>
+                                    :
+                                    <></>
+
+                            }
                         </div>
                         <div className="ul_list_ab">
-                          <h5>Заказать звонок</h5>
+                        <h5><Link to={'login'} style={{color: "#454545"}}>Login</Link></h5>
                         </div>
                     </ul>
                     <div className="ul_list">
                           <div className="ul_list_a">
-                            <p>8 (800) 890-46-56</p>
+                          <p onClick={() => setZvonok(true)}>Заказать звонок</p>
+                            {
+                                zvonok ? 
+                                <Modul maxWidth="800px" width='100%' padding='0 16px'  btn1={setZvonok}>
+                                       <Zvonok setZvonok={setZvonok}/>
+                                    </Modul>
+                                    :
+                                    <></>
+
+                            }
                         </div>
                         <div className="ul_list_a">
-                          <h5>Заказать звонок</h5>
+                        <h5><Link to={'login'} style={{color: "#454545"}}>Login</Link></h5>
                         </div>
                     </div>
                 </nav>  

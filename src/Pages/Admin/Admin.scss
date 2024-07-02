@@ -1,0 +1,88 @@
+
+.admin{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+    .home{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 5px;
+        margin-top: -80px;
+        margin-bottom: 40px;
+        .home_All{
+            h1{
+                font-family: Manrope;
+                font-size: 28px;
+                font-weight: 600;
+                line-height: 38.25px;
+                text-align: left;
+                color: #FFFFFF;
+                height: 38px;
+                
+            }
+            svg{
+                font-size: 20px;
+                color: #FFFFFF;
+
+            }
+        }
+    }
+.saidbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(91, 89, 89);
+   height: 100vh;
+   padding: 96px 31px;
+  
+   ul li a {
+   text-decoration: none;
+   font-family: Inter;
+   font-size: 20px;
+   color: white;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+}
+ ul li {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 20px;
+ }
+ ul li a svg{
+    font-size: 30px;
+    color: rgb(175, 175, 175);
+}
+}
+.logout{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+   margin-top: 350px;
+   .logout_all{
+    svg{
+        font-size: 24px;
+        color: #FFFFFF;
+        cursor: pointer;
+
+
+    }
+    h1{
+        font-family: Manrope;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24.59px;
+        text-align: left;
+        color: #FFFFFF;
+        cursor: pointer;
+        
+    }
+   }
+}
+}
