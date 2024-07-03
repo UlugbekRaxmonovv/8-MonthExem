@@ -108,11 +108,11 @@ const Korzinka = () => {
     }
     return (
      <>
-
+ <ProductTop/>
      {
       cartItems.length ? 
       <div className='container all_Oll'>
-      <ProductTop/>
+     
           <div className="korzinka_all">
          <div className="korzinka_all_row">
              <NavLink to={'/'}>
