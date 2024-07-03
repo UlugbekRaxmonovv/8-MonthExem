@@ -37,7 +37,7 @@ let data =[
 
 
 let links = data?.map((el,inx) =>(
-    <div className="pochemu_all" key={inx.id}>
+    <div className="pochemu_all" key={inx}>
     <div className="img">
         <div className="img_all">
             <img src={el.img} alt="" />

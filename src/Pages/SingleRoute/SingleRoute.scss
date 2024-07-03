@@ -157,6 +157,7 @@ margin-top: 40px;
             gap: 16px;
             margin-top: 30px;
             .inc{
+                display: none;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -164,6 +165,7 @@ margin-top: 40px;
                 width: 123px;
                 height: 53px;
                 border-radius: 10px;
+                cursor: pointer;
                 border: 1px solid #E5E5E5;
                 .in_al > button{
                     border: none;
@@ -181,7 +183,12 @@ margin-top: 40px;
     }
     
                 }
+          
+            
+            }
+            .inca{
                 .btn_inc{
+                    opacity: 0;
                     width: 180px;
                     height: 52px;
                     background: #454545;
@@ -194,9 +201,14 @@ margin-top: 40px;
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
+    border: none;
+ 
     
                 }
-            
+                .btn_inc.go{
+                   opacity: 1;
+                   
+                }
             }
             .wishlist{
                 display: flex;

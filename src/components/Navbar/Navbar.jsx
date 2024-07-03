@@ -19,18 +19,25 @@ import Search from '../Search/Search';
 const Navbar = () => {
     const [zvonok, setZvonok] = useState(false);
     const [value, setValue] = useState("");
+    const [menu, setMenu] = useState(false);
     const [search, setSearchAll] = useState(false);
+
+    const wishlistItems = useSelector((state) => state.wishlist.value);
+    const  cartItems  = useSelector(state => state.cart.value);
+
+    const [fix, setFix] = useState(false);
     const {data} = useGetProductsQuery({q:""});
     
     let {pathname} = useLocation();
     if(pathname.includes('/login') || pathname.includes('/admin')){
         return <></>;
     }
+   
      
   const filteredList = data?.filter(prop => prop.title.toLowerCase().includes(value.toLowerCase()));
 
 
-  const [fix, setFix] = useState(false);
+ 
   function setFixd() {
       if (window.scrollY >= 1) {
         setFix(true);
@@ -42,11 +49,7 @@ const Navbar = () => {
 
      
 
-    const [menu, setMenu] = useState(false);
-    const wishlistItems = useSelector((state) => state.wishlist.value);
-    const  cartItems  = useSelector(state => state.cart.value);
 
-    document.body.style.overflow =  menu ? "hidden" : "auto"
     return (
 
             <header>
@@ -96,7 +99,7 @@ const Navbar = () => {
                             }
                         </div>
                         <div className="ul_list_ab">
-                        <h5><Link to={'login'} style={{color: "#454545"}}>Login</Link></h5>
+                         <Link to={'login'} style={{color: "#454545"}}>Login</Link>
                         </div>
                     </ul>
                     <div className="ul_list">

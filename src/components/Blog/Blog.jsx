@@ -45,7 +45,7 @@ let data = [
 ]
 
 let links = data?.map((el,inx) =>(
-    <div className="blog_all" key={inx.id}>
+    <div className="blog_all" key={inx}>
     <div className="blog_img">
         <div className="blog_img_row">
           <img src={el.img} alt="" />

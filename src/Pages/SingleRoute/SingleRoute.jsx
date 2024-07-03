@@ -2,14 +2,17 @@ import React,{useState} from 'react';
 import './SingleRoute.scss'
 import rasm from '../../assets/img/sing.png'
 import { MdOutlineChevronRight } from "react-icons/md";
-import { useParams } from 'react-router-dom';
-import { FaRegHeart } from "react-icons/fa";
+import { Link, useParams } from 'react-router-dom';
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Footer from '../../components/Footer/Footer';
 import { useGetProductByIdQuery } from '../../components/context/api/productApi';
 import LoadingSingle from '../../components/LoadingSingle/LoadingSingle';
 import ProductTop from '../../components/ProductTop/index'
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { toggleHeart } from '../../components/context/slices/wishlistSlice';
 const SingleRoute = () => {
-    const [count,setCount] = useState(1)
+    const [count,setCount] = useState(false)
     const { id } = useParams();
     const { data,isLoading } = useGetProductByIdQuery(id);
     const onclick = () =>{
@@ -18,7 +21,9 @@ const SingleRoute = () => {
       const go = () =>{
         setCount(count - 1)
       }
-  
+      
+      const dispatch = useDispatch();
+      const wishlist = useSelector(state => state.wishlist.value);
     return (
       <>
       <ProductTop/>
@@ -30,7 +35,7 @@ const SingleRoute = () => {
          }
              <div className="singleRoute">
              <div className="glavnaya">
-                   <p>Главная</p> 
+                  <Link to={'/'}> <p>Главная</p> </Link>
                 </div>
                 <div className="glavnaya">
                 <MdOutlineChevronRight />
@@ -81,14 +86,17 @@ const SingleRoute = () => {
                                <span style={{color:"black"}}>{count}</span>
                               </div>
                               <div className="in_al">
-                                <button onClick={onclick}>+</button>
+                                <button onClick={() =>onclick(!count)}>+</button>
                               </div>
                             </div>
-                              <div className="inc">
-                                   <button className='btn_inc'>В корзину</button>
+                              <div className="inca">
+                                   <button className={`btn_inc ${count ? "go" : ""}`}>В корзину</button>
                               </div>
-                              <div className="wishlist">
-                                 <FaRegHeart />
+                              <div className="wishlist" onClick={() => dispatch(toggleHeart(data))}>
+                              {
+            wishlist?.some(item => item.id === data?.id) ? <FaHeart  style={{fontSize:'20px'}} />
+            : <FaRegHeart    style={{fontSize:'20px'}} />
+          }
                                  </div>
                            </div>
                         </div>

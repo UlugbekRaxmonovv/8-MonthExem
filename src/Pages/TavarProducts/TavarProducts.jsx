@@ -18,7 +18,7 @@ const TavarProducts = () => {
         <div className="card" key={users.id}>
         <div className="img">
          <div className="img_row">
-           <img src={users.url} alt=""/>
+           <img src={users.url[0]} alt=""/>
          </div>
         </div>
         <h1>{users.title}</h1>

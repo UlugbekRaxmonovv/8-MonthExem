@@ -5,7 +5,7 @@ import { useCreateProductMutation } from '../../../components/context/api/produc
 import { toast } from 'react-toastify';
 // import { useGetProductsQuery } from '../../../components/context/api/productApi';
 
-const intialstate ={
+const initialState ={
     title:'',
     price:'',
     url:'',
@@ -15,11 +15,11 @@ const intialstate ={
 const CreateProduct = () => {
     // const {data: products} = useGetProductsQuery();
     // console.log(products);
-    const {setstate,state,handelChange}= useFormInputValue(intialstate);
+    const {setState,state,handleChange}= useFormInputValue(initialState);
     const [usePost,{isLoading,isSuccess}] = useCreateProductMutation();
     useEffect(() =>{
         if(isSuccess){
-            setstate(intialstate);
+            setState(initialState);
            toast.success('User created')
         }
         if(isLoading){
@@ -44,19 +44,19 @@ const CreateProduct = () => {
             <div className="CreateProduct_all">
                 <form action="" onSubmit={handelSubmit}>
                     <label htmlFor="">Title</label>
-                <input type="text" placeholder='Title' required value={state.title} onChange={handelChange} name='title' />
+                <input type="text" placeholder='Title' required value={state.title} onChange={handleChange} name='title' />
                 <label htmlFor="">Price</label>
-                <input type="number" placeholder='Price' required  value={state.price} onChange={handelChange} name='price' />
+                <input type="number" placeholder='Price' required  value={state.price} onChange={handleChange} name='price' />
                 <label htmlFor=""> Desc</label>
-                <input type="text"  required value={state.desc}  onChange={handelChange} name='desc'/>
+                <input type="text"  required value={state.desc}  onChange={handleChange} name='desc'/>
                 <label htmlFor="">Category</label>
-                <select  id=""  required  value={state.category} onChange={handelChange} name='category'>
+                <select  id=""  required  value={state.category} onChange={handleChange} name='category'>
                 <option value="Tanlang">Tanlang</option>
                 <option value="Tanlang">Tanlang</option>
                 <option value="Tanlang">Tanlang</option>
                 </select>
                 <label htmlFor="">Image-url</label>
-                <textarea required id="" cols="30" rows="10" value={state.url} onChange={handelChange}  name='url'  >
+                <textarea required id="" cols="30" rows="10" value={state.url} onChange={handleChange}  name='url'  >
 
                 </textarea>
                   <button style={{width:'100px',height:'40px',
