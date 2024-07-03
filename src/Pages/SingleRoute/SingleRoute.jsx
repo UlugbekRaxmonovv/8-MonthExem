@@ -40,20 +40,20 @@ const SingleRoute = () => {
              <div className="singleRoute_row">
                       <div className="singleRoute_row_img">
                         <div className="img_row">  
-                            <img src={data?.url} alt="allll" />
+                            <img src={data?.url[0]} alt="allll" />
                         </div>
                      <div className="img_link">
                      <div className="img">
-                            <img src={data?.url} alt="" />
+                            <img src={data?.url[1]} alt="" />
                         </div>
                         <div className="img">
-                            <img src={data?.url} alt="" />
+                            <img src={data?.url[0]} alt="" />
                         </div>
                         <div className="img">
-                            <img src={data?.url} alt="" />
+                            <img src={data?.url[1]} alt="" />
                         </div>
                         <div className="img">
-                            <img src={data?.url} alt="" />
+                            <img src={data?.url[0]} alt="" />
                         </div>
                      </div>
                       </div>

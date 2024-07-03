@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 const initialState = {
 	value: JSON.parse(localStorage.getItem("cart")) || [] 
 };
@@ -12,7 +11,6 @@ const cartSlice = createSlice({
 			if (index < 0) {
 				state.value = [...state.value, { ...action.payload, quantity: 1 }];
 			}
-			toast.success("Ma'lumot qushildi")
 			localStorage.setItem("cart", JSON.stringify(state.value));
 		},
 		removeFromCart: (state, action) => {

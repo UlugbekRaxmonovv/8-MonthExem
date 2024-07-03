@@ -43,7 +43,6 @@ function App() {
       <Route path="/wishlist" element={<Wishlist/>} />
       <Route path="/korzinka" element={<Korzinka/>} />
       <Route path="/blog" element={<Blog/>} />
-      <Route path="*" element={<NotFound/>} />
       <Route path='/contact' element={<Kontact/>}/>
       <Route path='/tavar-products' element={<TavarProducts/>}/>
       <Route path='/login' element={<Login/>}/>
@@ -55,6 +54,7 @@ function App() {
         <Route path='manage-product' element={<ManageProduct/>}/>
         </Route>
         </Route>
+        <Route path="*" element={<NotFound/>} />
 
     </Routes>
      

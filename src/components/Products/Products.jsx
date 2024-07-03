@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './Products.scss'
 import './ProductAll.scss'
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
+import { IoCartOutline,IoCart } from "react-icons/io5";
 import { VscArrowRight } from 'react-icons/vsc';
 import Modul from '../Modul/Modul';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -12,15 +12,16 @@ import Loading from '../Loading/Loading';
 import {useDispatch,useSelector } from 'react-redux';
 import {toggleHeart} from '../../components/context/slices/wishlistSlice'
 import { addToCart } from '../context/slices/cartSlice';
-import { CiHeart } from 'react-icons/ci';
-import TavarProducts from '../../Pages/TavarProducts/TavarProducts';
+import { useDeleteProductMutation } from '../context/api/productApi';
 
 
 
 let Api_Url = "https://667fec3456c2c76b495a8d83.mockapi.io"
-const Products = ({data, btn1, btn,isLoading,title}) => {
+const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
+    const [deletUser] = useDeleteProductMutation();
     const dispatch = useDispatch();
     const wishlist = useSelector(state => state.wishlist.value);
+    const cart = useSelector(state => state.cart.value);
     const [searchParams, setSearchParams] = useSearchParams();
     const [productDetails, setProductDetails] = useState(null);
     useEffect(() => {
@@ -37,18 +38,30 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
         }
     }, [searchParams]);
 
+    const handelDeletUser = (id) => {
+        deletUser(id)
+      }
+
+      
     let links = data?.map((users) =>(
         <div className="card" key={users.id}>
         <div className="img">
          <div className="img_row">
-           <img src={users.url} alt="" onClick={() => setSearchParams({ details: users.id})} />
+           <img src={users.url[0]} alt="" onClick={() => setSearchParams({ details: users.id})} />
          </div>
          <div className="img_row">
             <span onClick={() => dispatch(toggleHeart(users))}>
             {
             wishlist?.some(item => item.id === users.id) ? <FaHeart  style={{fontSize:'20px'}} />
-            : <CiHeart    style={{fontSize:'20px'}} />
+            : <FaRegHeart    style={{fontSize:'20px'}} />
           }
+           {
+              isAdmin ?
+                <button onClick={() =>handelDeletUser(users.id)}>delet</button>
+
+              :
+              <></>
+            }
             </span>
              
 </div>
@@ -62,7 +75,13 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
              <h6>{users.price}</h6>
          </div>
          <div className="card_all_all">
-        <IoCartOutline onClick={() =>dispatch(addToCart(users))}/>
+                {
+                    cart?.some((cart) => cart.id === users.id) ? 
+                    <IoCart onClick={() =>dispatch(addToCart(users))}/>
+                    :
+                    <IoCartOutline onClick={() =>dispatch(addToCart(users))}/>
+
+                }
          </div>
 
       </div>
@@ -111,7 +130,7 @@ const Products = ({data, btn1, btn,isLoading,title}) => {
                 </div>
           </Link>
                 {productDetails && (
-                <Modul btn1={removeProductDetails}>
+                <Modul btn1={removeProductDetails} >
                     <Single detail={productDetails} />
                 </Modul>
             )}

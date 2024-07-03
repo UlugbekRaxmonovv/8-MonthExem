@@ -17,7 +17,7 @@ const Home = () => {
             <Main /> 
             <Katalog/>
             <Pochemu /> 
-            <Products title={"Популярные товары "} data={data} isLoading={isLoading} /> 
+            <Products  isAdmin={false}  title={"Популярные товары "} data={data} isLoading={isLoading} /> 
             <Brendlar />  
             <Blog />  
             <Production />

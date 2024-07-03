@@ -1,0 +1,58 @@
+
+.CreateProduct{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 36px 0px;
+    margin-left: 120%;
+    .CreateProduct_all{
+        display: flex;
+        align-items: self-start;
+        flex-direction: column;
+        width: 100%;
+        form{
+            display: flex;
+            flex-direction: column;
+            label{
+              margin-bottom: 10px;
+            }
+            input{
+                width: 620px;
+                height: 58px;
+                border-radius: 10px;
+                background: #F8F8F8;
+                outline: none;
+                border: none;
+                padding: 0 10px;
+                margin-bottom: 30px;
+   
+                ::placeholder{
+                    font-size: 20px;
+                    font-family: Manrope;
+                }
+
+            }
+            select{
+                width: 620px;
+                height: 58px;
+                border-radius: 10px;
+                background: #F8F8F8;
+                outline: none;
+                border: none;
+                padding: 0 10px;
+                margin-bottom: 30px;
+            }
+            textarea{
+                width: 620px;
+                height: 164px;
+                resize: none;
+                border: none;
+                outline: none;
+                background: #F8F8F8;
+                padding: 15px 20px;
+
+            }
+            
+        }
+    }
+}

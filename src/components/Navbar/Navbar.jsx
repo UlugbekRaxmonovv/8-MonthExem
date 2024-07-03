@@ -13,23 +13,45 @@ import { useSelector } from 'react-redux';
 import { Navigate,useLocation } from 'react-router-dom';
 import Modul from '../../components/Modul/Modul'
 import Zvonok from '../Zvonok/Zvonok';
+import {  useGetProductsQuery} from '../../components/context/api/productApi'
+import Search from '../Search/Search';
 
 const Navbar = () => {
     const [zvonok, setZvonok] = useState(false);
+    const [value, setValue] = useState("");
+    const [search, setSearchAll] = useState(false);
+    const {data} = useGetProductsQuery({q:""});
+    
     let {pathname} = useLocation();
     if(pathname.includes('/login') || pathname.includes('/admin')){
         return <></>;
     }
+     
+  const filteredList = data?.filter(prop => prop.title.toLowerCase().includes(value.toLowerCase()));
+
+
+  const [fix, setFix] = useState(false);
+  function setFixd() {
+      if (window.scrollY >= 1) {
+        setFix(true);
+      } else {
+        setFix(false);
+      }
+    }
+    window.addEventListener('scroll', setFixd);
+
+     
+
     const [menu, setMenu] = useState(false);
     const wishlistItems = useSelector((state) => state.wishlist.value);
     const  cartItems  = useSelector(state => state.cart.value);
 
 
     return (
-        <div>
+
             <header>
              <div className="container">
-             <nav className="nav_all">
+             <nav className={`nav_all ${fix ? "fix" : ""}`}>
                     <ul className={`ul ${menu ? "show" : ""}`}>
                         <li>
                             <a href="" className="">О компании</a>
@@ -95,7 +117,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </nav>  
-                <div className="logo">
+                <div className={`logo ${fix ? "fix" : ""}`}>
              
                  {
                     menu? 
@@ -161,21 +183,25 @@ const Navbar = () => {
                         <div className="logo_link_all">
                         <div className="navbar_sorch">
                         <input 
-                        // value={value}
-                        // onFocus={() =>setSearchAll(true)}
-                        // onBlur={() => {
-                        //   setTimeout(() => setSearchAll(false), 200);
-                        // }}
-                        // onChange={(e) => setValue(e.target.value)}
+                        value={value}
+                        onFocus={() =>setSearchAll(true)}
+                        onBlur={() => {
+                          setTimeout(() => setSearchAll(false), 200);
+                        }}
+                        onChange={(e) => setValue(e.target.value)}
                         type="text" placeholder='Поиск по товарам' />
               <IoSearchOutline />
-                        {/* {
-                            value.trim() &&  searchall ? 
-                             <div className="modul_all">
-                          <Search data={ data1?.products} />
+             
+                           {
+                            value.trim() &&  search ? 
+                             <div className="modul_all_row">
+                                 <h1>Популярное</h1> <br />
+                             {filteredList?.map((item) => (
+                                <Search item={item}/>
+                                        ))}
                             </div>
                             : <></>
-                        } */}
+                        }
                        
                     </div>
                         </div>
@@ -222,7 +248,7 @@ const Navbar = () => {
                 </div>
              </div>
             </header>
-        </div>
+    
     );
 }
 

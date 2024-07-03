@@ -1,0 +1,43 @@
+.CreateCategory_all{
+    margin-left: 110%;
+}
+.delet{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ .delet_all{
+    padding: 4px 16px;
+    border-radius: 4px;
+    background-color: red;
+    button{
+        color: white;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover{
+            background-color: red;
+        
+        }
+
+    }
+ }   
+ .delet_alls{
+    padding: 4px 16px;
+    border-radius: 4px;
+    background-color: yellowgreen;
+    button{
+        color: white;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        
+        &:hover{
+            background-color: yellowgreen;
+        
+        }
+
+    }
+ }   
+}
