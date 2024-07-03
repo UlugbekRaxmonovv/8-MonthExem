@@ -11,6 +11,7 @@
 
    }
    .login_row{
+     
         width: 502.15px;
         height: 73.17px;
         top: 392.34px;
@@ -24,10 +25,16 @@
         align-items: center;
         background-color: white;
     }
+    .eye{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
     .login_row input{
             outline: none;
             border: none;
-            padding: 0 10px;
+            width: 95%;
+            padding: 0 20px;
             background-color: white transparent; 
             ::placeholder{
                 background-color: white transparent; 
@@ -108,5 +115,8 @@ color: #FFFFFF;
 background: #33A0FF;
 border: none;
 
-        }       
+        }    
+        .eye{
+            font-size: 15px;
+        }   
         }

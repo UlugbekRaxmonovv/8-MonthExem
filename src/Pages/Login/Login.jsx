@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.scss'
 import { useFormInputValue } from '../../components/Hook/useFormInputValur';
 import { toast } from 'react-toastify';
@@ -6,6 +6,7 @@ import { setToken } from '../../components/context/slices/authSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useGetProductsQuery } from '../../components/context/api/productApi';
+import { PiEyeFill, PiEyeSlashFill } from 'react-icons/pi';
 
 const intialstate = {
     UserName:"",
@@ -14,6 +15,7 @@ const intialstate = {
 const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [eye, setEye] = useState(false);
     const {state,setstate,handelChange} = useFormInputValue(intialstate)
     const {isLoading } = useGetProductsQuery();
 
@@ -43,9 +45,19 @@ const Login = () => {
               <input placeholder='UserName' value={state.UserName} onChange={handelChange} name='UserName' type="text" />
               </div>
                 <label htmlFor="">Password</label> <br />
-              <div className="login_row">
-              <input placeholder="password " value={state.password} onChange={handelChange} name='password' type="text" />
+             <div className="login_hammasi">
+             <div className="login_row">
+              <input placeholder="password " value={state.password} onChange={handelChange} name='password' type={
+                    eye ? "text" : "password" 
+                  } />
+                          <div className="int_a" onClick={() => setEye(p => !p)} >
+                    {
+                  eye ?     <PiEyeSlashFill  className="eye"/>
+                  : <PiEyeFill   className="eye"/>
+                }
+                </div>
               </div>
+             </div>
 
               <div className="login_row1">
                 <button>
