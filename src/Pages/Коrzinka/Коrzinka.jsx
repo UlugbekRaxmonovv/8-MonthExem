@@ -9,7 +9,21 @@ import { useSelector,useDispatch } from 'react-redux';
 import { RiDeleteBinFill } from "react-icons/ri";
 import ProductTop from '../../components/ProductTop/index'
 import Empty from '../../components/Empty/Empty';
+import { useFormInputValue } from '../../components/Hook/useFormInputValur';
 import { decrementCart,incremented,removeFromCart,deleteAllCart } from '../../components/context/slices/cartSlice';
+const Bot_Token = "6409705996:AAH7HRsbbymTuGEK2h8joN7nQX0Eypu7MRg"
+const Chat_ID = "-1002098227822"
+const User_ID = "5125371890"
+import { PatternFormat } from 'react-number-format';
+
+const intialState = {
+   name: '',
+   email: '',
+   phone: "",
+   comment: '',
+    adrest:""
+
+}
 const Korzinka = () => {
    const [kupon,setKupon] = useState()
     const [name,setName] = useState('')
@@ -17,7 +31,7 @@ const Korzinka = () => {
     const  cartItems  = useSelector(state => state.cart.value);
     let javob1 =cartItems?.reduce((a,b) => a + (b.price  * b.quantity),0)
     let javob = Math.floor(javob1)
-
+  
     let links =cartItems?.map((item) =>(
       <div className="korzinka_row" key={item.id}>
       <div className="korzinka_row_link">
@@ -25,7 +39,7 @@ const Korzinka = () => {
          <div className="photo">
              <div className="img">
 
-                <img src={item.url} alt="" />
+                <img src={item.url[0]} alt="" />
              </div>
               </div>
               <div className="photoa">
@@ -34,7 +48,7 @@ const Korzinka = () => {
                      <p>{item.title}</p>
                  </div>
                  <div className="pr1">
-                    <h4>{item.price}</h4>
+                    <h4>${item.price}</h4>
                  </div>
                 </div>
               </div>
@@ -63,7 +77,31 @@ const Korzinka = () => {
       </div>
     </div>
     )) 
-   
+    const {setstate,state,handelChange}= useFormInputValue(intialState)
+    const handelSubmit = (e) => {
+      e.preventDefault()
+      let text = "Buyurtma %0A%0A"
+      text +=`Ismi:${state.name}%0A`
+      text +=`Phone:${state.phone}%0A`
+      text +=`Email:${state.email}%0A`
+      text +=`Text:${state.comment}%0A`
+      text +=`LastName:${state.adrest}%0A%0A`
+      cartItems?.forEach((item)=>{
+         text +=`Nomi: ${item.title}%0A`
+         text +=`Miqdori: ${item.quantity}%0A`
+         text +=`Narxi: ${item.price}%0A`
+    })
+      
+      let url = `https://api.telegram.org/bot${Bot_Token}/sendMessage?chat_id=${Chat_ID}&text=${text}`
+  
+      let api = new XMLHttpRequest()
+      api.open("GET", url, true)
+      api.send()
+      setstate(intialState)
+  
+  }
+
+
 
     const HandleKupon = () =>{
       setKupon( name == "iPhone15" ? javob * 0.2 : 0 ) 
@@ -158,17 +196,17 @@ const Korzinka = () => {
 
  <div className="korzinka_column">
 <div className="korzinka_column_alt">
-<form action="">
+<form action=""  onSubmit={handelSubmit}>
 <h1>Оформление</h1>
 <div className="input">
 <div className="input_all">
-      <input type="text" placeholder='ФИО' />
+      <input type="text" placeholder='ФИО' name='name' value={state.name} onChange={handelChange} />
    </div>
    <div className="input_all">
-      <input type="text" placeholder='телефон' />
+   <PatternFormat format="+998 (##) ### ####" allowEmptyFormatting mask="_"  placeholder='телефон'   name='phone' value={state.phone} onChange={handelChange}/>
    </div>
    <div className="input_all">
-      <input type="email" placeholder='Электронная почта' />
+      <input type="email" placeholder='Электронная почта'  name='email' value={state.email} onChange={handelChange} />
    </div>
 </div>
 <div className="input_link">
@@ -188,10 +226,11 @@ const Korzinka = () => {
 </div>
 </div>
      <div className="input_list">
-      <input type="text" placeholder='Адрес доставки' />
+      <input type="text" placeholder='Адрес доставки'  name='adrest' value={state.adrest} onChange={handelChange} />
      </div>
-     <textarea name="" id="" cols="30" rows="10" placeholder='Комментарий'>Комментарий</textarea>
+     <textarea  name="comment"  value={state.comment} onChange={handelChange} id="" cols="30" rows="10" placeholder='Комментарий'>Комментарий</textarea>
 </div>
+<button style={{padding:'4px 16px',borderRadius:'4px',backgroundColor:'#454545',color:'white',fontSize:'16px',border:'none'}}>submit</button>
 </form>
 </div>
  </div>
@@ -205,7 +244,7 @@ const Korzinka = () => {
    <input type="text"  value={name}  onChange={(e) => setName(e.target.value)} placeholder='iPhone15'/>
    </div>
    <div className="kupon_pric">
-      <p>{(javob - kupon)}</p>
+      <p>{(javob + kupon)}0</p>
    </div>
    </div>
    <div className="kupon_right">
@@ -213,7 +252,7 @@ const Korzinka = () => {
    <input type="text"  placeholder='Доставка..............................................'/>
    </div>
    <div className="kupon_pric">
-      <p>{kupon}</p>
+      <p>${kupon}</p>
    </div>
    </div>
 </div>
@@ -232,7 +271,7 @@ const Korzinka = () => {
 </div>
 </div>
 <div className="kupon_item">
-<h6>{javob}</h6>
+<h6>${javob}</h6>
 
 <div className="kupon_btn">
    <div className="lupon_btn1">

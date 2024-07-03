@@ -46,7 +46,7 @@ const Navbar = () => {
     const wishlistItems = useSelector((state) => state.wishlist.value);
     const  cartItems  = useSelector(state => state.cart.value);
 
-
+    document.body.style.overflow =  menu ? "hidden" : "auto"
     return (
 
             <header>

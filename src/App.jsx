@@ -24,18 +24,11 @@ import TavarProducts from './Pages/TavarProducts/TavarProducts'
 
 
 function App() {
-  const [islogin, setIsLogin] = useState(false);
-  document.body.style.overflow =  islogin ? "hidden" : "auto"
+
   return (
     <>
     <ToastContainer/>
     <Navbar />
-    {
-        islogin ?    <Modul btn1={setIsLogin}  >
-         </Modul>
-         :
-         <></>
-      }
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/catalog" element={<Katalog/>} />

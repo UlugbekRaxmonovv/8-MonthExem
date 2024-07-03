@@ -234,6 +234,7 @@
                     padding: 0 10px;
                     input{
                         border: none ;
+                        width: 100%;
                         outline: none;
                         background: #F2F2F2;
                         ::placeholder{
@@ -290,6 +291,7 @@
                     input{
                         border: none;
                         outline: none;
+                        width: 100%;
                         background: #F2F2F2;
                         ::placeholder{
                             font-family: Manrope;
@@ -1027,7 +1029,7 @@
                         margin-top: 11px;
                         padding: 20px 20px;
                         width: 288px;
-                        height: 140.87px;
+                        height: 100.87px;
 
                     }   
                 }
