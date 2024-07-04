@@ -106,7 +106,70 @@ header {
     align-items: center;
     gap: 24px;
 }
-
+.ul_list_a{
+  
+      
+}
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 50%;
+    
+  
+    &-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+  
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+  
+ .custom-options {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 50%;
+      border: 1px solid #ccc;
+      background-color: white;
+      z-index: 10;
+      cursor: pointer;
+  
+      .custom-option {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        cursor: pointer;
+  
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  
+    &:hover .custom-options {
+      display: block;
+    }
+  }
 .ul_list_a p {
     font-family: Manrope;
     font-size: 14px;

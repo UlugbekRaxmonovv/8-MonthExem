@@ -39,6 +39,7 @@
         height: 70px;
         color: #454545;
         margin-top: 20px;
+        
         span{
          position: absolute;
          top: 25%;
@@ -224,6 +225,7 @@
                 gap: 20px;
                 padding: 31px 0;
                 border-bottom: 1px solid #000000;
+
                 .input_all{
                     display: flex;
                     align-items: center;
@@ -232,6 +234,13 @@
                     border-radius: 100px ;
                     border: 1px solid #454545;
                     padding: 0 10px;
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover, 
+                    input:-webkit-autofill:focus, 
+                    input:-webkit-autofill:active{
+                        transition: background-color 5000s ease-in-out 0s;
+                        box-shadow: inset 0 0 20px 20px #F2F2F2;
+                    }
                     input{
                         border: none ;
                         width: 100%;
@@ -288,6 +297,14 @@
                     border: 1px solid #454545;
                     padding: 0 12px;
                     margin-top: 31px;
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover, 
+                    input:-webkit-autofill:focus, 
+                    input:-webkit-autofill:active{
+                        transition: background-color 5000s ease-in-out 0s;
+                        box-shadow: inset 0 0 20px 20px transparent;
+                    }
+                    
                     input{
                         border: none;
                         outline: none;
@@ -343,6 +360,7 @@
             display: none;
             align-items: center;
             gap: 10px;
+            
             .radio{
                 span{
                     padding: 0 10px;
@@ -375,10 +393,11 @@
             align-items: center;
             gap: 5px;
             .kupon_pric{
+                
                 input{
                     border: none;
                     outline: none;
-                    background: #F2F2F2; 
+                    background-color: #F2F2F2;
                     ::placeholder{
                         font-family: Manrope;
                         font-size: 16px;
@@ -387,6 +406,13 @@
                         text-align: left;
                         color: #454545;
                         
+                    }
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover, 
+                    input:-webkit-autofill:focus, 
+                    input:-webkit-autofill:active{
+                        transition: background-color 5000s ease-in-out 0s;
+                        box-shadow: inset 0 0 20px 20px #F2F2F2 ;
                     }
                 }
             }
@@ -432,6 +458,45 @@
     }
 }
 
+
+
+
+// wishlist
+
+
+.al_h2{
+    position: relative;
+    flex-wrap: nowrap;
+    padding: 20px 0;
+    h1{
+        font-family: Manrope;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 70.4px;
+        text-align: left;
+        max-width: 605px;
+        width: 100%;
+        height: 70px;        
+        color: #454545;
+        margin-top: 20px;
+        
+        span{
+         position: absolute;
+         top: 25%;
+         padding: 0px 6px;
+         border-radius: 50%;
+         font-family: Manrope;
+         font-size: 12px;
+         font-weight: 600;
+         line-height: 16.39px;
+        text-align: center;
+         color: #FFFFFF;
+         background-color: red;
+         
+        }
+    }
+  
+}
 
 
 @media(max-width:900px){
@@ -637,6 +702,15 @@
              background-color: red;
              
             }
+        }
+      
+    }
+    .al_h2{
+        h1{
+            font-family: Manrope;
+            font-size: 32px;
+            
+         
         }
       
     }
@@ -890,6 +964,17 @@
         }
       
     }
+    .al_h2{
+        h1{
+            font-family: Manrope;
+            font-size: 32px;
+            
+         
+        }
+      
+    }
+
+
     .korzinka_hammasi{
         width: 328px;
         display: grid;

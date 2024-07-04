@@ -1,0 +1,16 @@
+{
+    "navbar":{
+        "About company": "Kompaniya haqida",
+        "Shipping and payment": "Yetkazib berish va to'lash",
+        "Return": "Qaytish",
+        "Guarantees": "Kafolatlar",
+        "Contacts": "Contact",
+        "Blog": "Blog",
+        "Zakazat bell":"Zakazat bell"
+    },
+    "Favorites":"sevimlilar",
+    "Cart":"Savat",
+    "Search":"Qidiruv",
+    "Comparison":"Taqqoslash"
+
+}

@@ -7,16 +7,16 @@ import { VscArrowRight } from 'react-icons/vsc';
 import Modul from '../Modul/Modul';
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import Single from '../Single/Single';
 import Loading from '../Loading/Loading';
 import {useDispatch,useSelector } from 'react-redux';
 import {toggleHeart} from '../../components/context/slices/wishlistSlice'
 import { addToCart } from '../context/slices/cartSlice';
 import { useDeleteProductMutation } from '../context/api/productApi';
-
-
-
 let Api_Url = "https://667fec3456c2c76b495a8d83.mockapi.io"
+import { useGetCategoryQuery } from '../context/api/productApi';
 const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
     const [deletUser] = useDeleteProductMutation();
     const dispatch = useDispatch();
@@ -24,6 +24,9 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
     const cart = useSelector(state => state.cart.value);
     const [searchParams, setSearchParams] = useSearchParams();
     const [productDetails, setProductDetails] = useState(null);
+    const {data:category} = useGetCategoryQuery();
+     const [ count,setCount] =useState(4)
+
     useEffect(() => {
         const id = searchParams.get('details');
         if (id) {
@@ -43,7 +46,7 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
       }
 
       
-    let links = data?.map((users) =>(
+    let links = data?.slice(0,count).map((users) =>(
         <div className="card" key={users.id}>
         <div className="img">
          <div className="img_row">
@@ -116,9 +119,26 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
                  <Loading count={8} /> : 
                  <></>
             }
+
+            <ul className='category'>
+                       {
+                        category?.map((el) =>(
+                            <li key={el}>
+                                <data>{el.title}</data>
+                            </li>
+                        ))
+                        }
+               
+            </ul>
+
             <div className="wrapper">
               {links}
             </div>
+           <div className="count">
+           <Stack direction="row" spacing={2}>
+      <Button variant="contained" onClick={() => setCount(p => p + count)}>Contained</Button>
+    </Stack>
+           </div>
           <Link to={'/tavar-products'}>
           <div className="btn_all_list">
                     <div className="btn1">

@@ -12,6 +12,7 @@
         justify-content: center;
         gap: 30px;
         .img_row{
+          cursor: pointer;
             img{
                 width: 173px;
                 height: 216px;
@@ -69,6 +70,7 @@ text-decoration: line-through;
             height: 25px;
             border-radius: 100px ;            
             background: #454545;
+            cursor: pointer;
           svg{
             font-size: 20px;
             color: #fff;
@@ -79,6 +81,13 @@ text-decoration: line-through;
 }
 .btn_all_list{
     display: none;
+}
+
+.count{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
 }
  @media(max-width:900px){
   .wrapper{

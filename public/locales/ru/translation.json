@@ -1,0 +1,16 @@
+{
+    "navbar":{
+        "About company": "О компании",
+        "Shipping and payment": "Доставка и оплата",
+        "Return": "Возврат",
+        "Guarantees": "Гарантии",
+        "Contacts": "Контакты",
+        "Blog": "Блог",
+        "Zakazat bell":"Заказать звонок"
+    },
+    "Favorites":"Избранное",
+    "Cart":"Корзина",
+    "Search":"Поиск по товарам",
+    "Comparison":"Сравнение"
+
+}

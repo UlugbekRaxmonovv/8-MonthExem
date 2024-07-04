@@ -6,7 +6,9 @@ import { setToken } from '../../components/context/slices/authSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { PiEyeFill, PiEyeSlashFill } from 'react-icons/pi';
-
+import {provider,auth} from '../../components/firebase/index'
+import {signInWithPopup} from 'firebase/auth'
+import rasm from '../../assets/img/gog.png'
 const initialState = {
   UserName: "",
   password: ""
@@ -18,6 +20,15 @@ const Login = () => {
   const [eye, setEye] = useState(false);
   const { state, setState, handleChange } = useFormInputValue(initialState);
 
+  const handlePopup =() => {
+    signInWithPopup(auth,provider)
+    .then((res) =>{
+      console.log(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     if (state.UserName === "john32" && state.password === "12345678") {
@@ -30,9 +41,13 @@ const Login = () => {
     }
   };
 
+
+
+
+
   return (
     <div className='container'>
-      <div className="login container">
+      <div className="login ">
         <form onSubmit={handleSubmit}>
           <div className="login_all">
             <label htmlFor="username">Username</label> <br />
@@ -61,9 +76,15 @@ const Login = () => {
                 </div>
               </div>
             </div>
-            <div className="login_row1">
+          <div className="login_link_row">
+          <div className="login_row1">
               <button>Login</button>
             </div>
+            <div className="login_rows">
+                <img onClick={handlePopup}  src={rasm} alt="" />
+
+            </div>
+          </div>
           </div>
         </form>
       </div>

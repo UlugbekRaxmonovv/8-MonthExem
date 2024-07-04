@@ -1,0 +1,17 @@
+{
+    "navbar":{
+        "About company": "About company",
+        "Shipping and payment": "Delivery and payment",
+        "Return": "Return",
+        "Guarantees": "Guarantees",
+        "Contacts": "Contacts",
+        "Blog": "Blog",
+        "Zakazat bell":"Order"
+    },
+    "Favorites":"Favorites",
+    "Cart":"Cart",
+    "Search":"Search by product",
+    "Comparison":"Comparison"
+}
+
+

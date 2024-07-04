@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import './SingleRoute.scss'
 import rasm from '../../assets/img/sing.png'
 import { MdOutlineChevronRight } from "react-icons/md";
@@ -15,6 +15,13 @@ const SingleRoute = () => {
     const [count,setCount] = useState(false)
     const { id } = useParams();
     const { data,isLoading } = useGetProductByIdQuery(id);
+    const [img,setImg] = useState(data)
+    useEffect(() => {
+        if(data){
+            setImg(data.url[0])
+        }
+    }, [data])
+
     const onclick = () =>{
         setCount(count + 1)
       }
@@ -45,21 +52,19 @@ const SingleRoute = () => {
              <div className="singleRoute_row">
                       <div className="singleRoute_row_img">
                         <div className="img_row">  
-                            <img src={data?.url[0]} alt="allll" />
+                            <img src={img} alt="allll" />
                         </div>
                      <div className="img_link">
-                     <div className="img">
-                            <img src={data?.url[1]} alt="" />
-                        </div>
-                        <div className="img">
-                            <img src={data?.url[0]} alt="" />
-                        </div>
-                        <div className="img">
-                            <img src={data?.url[1]} alt="" />
-                        </div>
-                        <div className="img">
-                            <img src={data?.url[0]} alt="" />
-                        </div>
+                          {
+                           data?.url?.map((img,inx) =>(
+                              <div className="img" key={inx}>
+                              <img onClick={() => setImg(img)} src={img} alt="" />
+                              </div>
+                           ))
+                          }
+                  
+                         
+                      
                      </div>
                       </div>
                       <div className="singleRoute_row_img">

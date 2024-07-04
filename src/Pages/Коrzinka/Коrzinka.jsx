@@ -21,7 +21,7 @@ const intialState = {
    email: '',
    phone: "",
    comment: '',
-    adrest:""
+   adrest:""
 
 }
 const Korzinka = () => {
@@ -77,7 +77,7 @@ const Korzinka = () => {
       </div>
     </div>
     )) 
-    const {setstate,state,handelChange}= useFormInputValue(intialState)
+    const {setState,state,handleChange}= useFormInputValue(intialState)
     const handelSubmit = (e) => {
       e.preventDefault()
       let text = "Buyurtma %0A%0A"
@@ -97,7 +97,7 @@ const Korzinka = () => {
       let api = new XMLHttpRequest()
       api.open("GET", url, true)
       api.send()
-      setstate(intialState)
+      setState(intialState)
   
   }
 
@@ -200,13 +200,13 @@ const Korzinka = () => {
 <h1>Оформление</h1>
 <div className="input">
 <div className="input_all">
-      <input type="text" placeholder='ФИО' name='name' value={state.name} onChange={handelChange} />
+      <input type="text" placeholder='ФИО' name='name' value={state.name} onChange={handleChange} />
    </div>
    <div className="input_all">
-   <PatternFormat format="+998 (##) ### ####" allowEmptyFormatting mask="_"  placeholder='телефон'   name='phone' value={state.phone} onChange={handelChange}/>
+   <PatternFormat format="+998 (##) ### ####" allowEmptyFormatting mask="_"  placeholder='телефон'   name='phone' value={state.phone} onChange={handleChange}/>
    </div>
    <div className="input_all">
-      <input type="email" placeholder='Электронная почта'  name='email' value={state.email} onChange={handelChange} />
+      <input type="email" placeholder='Электронная почта'  name='email' value={state.email} onChange={handleChange} />
    </div>
 </div>
 <div className="input_link">
@@ -226,9 +226,9 @@ const Korzinka = () => {
 </div>
 </div>
      <div className="input_list">
-      <input type="text" placeholder='Адрес доставки'  name='adrest' value={state.adrest} onChange={handelChange} />
+      <input type="text" placeholder='Адрес доставки'  name='adrest' value={state.adrest} onChange={handleChange} />
      </div>
-     <textarea  name="comment"  value={state.comment} onChange={handelChange} id="" cols="30" rows="10" placeholder='Комментарий'>Комментарий</textarea>
+     <textarea  name="comment"  value={state.comment} onChange={handleChange} id="" cols="30" rows="10" placeholder='Комментарий'>Комментарий</textarea>
 </div>
 <button style={{padding:'4px 16px',borderRadius:'4px',backgroundColor:'#454545',color:'white',fontSize:'16px',border:'none'}}>submit</button>
 </form>
