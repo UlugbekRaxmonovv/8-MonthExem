@@ -50,10 +50,13 @@
         font-weight: 500;
         line-height: 22px;
         text-align: left;
-        width: 227px;
+        width: 200px;
         height: 44px;
         color: #454545;
-    
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;    
                 
        }
        h5{
