@@ -1,6 +1,7 @@
 *{
     font-family: "Manrope", sans-serif;
 }
+
 .home{
     position: sticky;
     top: 0px;
@@ -12,6 +13,7 @@
     align-items: center;
     padding: 0 20px;
     background-color: rgb(91, 89, 89);
+    transition: all .15s linear;
     .hom{
         display: flex;
     align-items: center;
@@ -66,28 +68,128 @@
         font-size: 30px;
         color: #9e9ea4
       }
+      .svg{
+        font-size:30px ;
+        color: #9e9ea4
+      }
   }
 }
-#dark{
-    background-color: white;
-}
 
-#light{
-    background-color: rgb(91, 89, 89);
-}
-
-#dark.home{
-  box-shadow: 1px 1px 5px 1px gray;
-  .hom{
+.home.light{
+    background-color: #2D3663;
+    .hom{
     .home_All{
-        h1{
-            color:black;
+        svg{
+            background-color: white;
+            padding: 4px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #2D3663;
+
+
         }
     }
+    
+}
+.hom{
+    .home_All.show{
+   svg{
+            font-size: 40px;
+            color: #6A6A6A;
+            background-color: #FFFFFF;
+        }
+    }
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .icon{
+        vertical-align: middle;
+        line-height: 1px;
+        font-size: 30px;
+        color: white
+      }
+      .svg{
+        font-size:30px ;
+        color: white
+      }
   }
 }
-
-
+.admin.light .saidbar{
+    background-color: #2D3663;
+    ul {
+        .all{
+            display: flex;
+            align-items: center;
+            padding: 20px 20px;
+            gap: 20px;
+          
+         }
+        .sidebar-list-item{
+         display: flex;
+         align-items: center;
+         padding: 0 20px;
+         &:hover{
+            background-color: #6A6A6A;
+            border-radius: 8px;
+            width: 250px;
+            
+          
+        }
+       
+        .icon{
+            font-size: 30px;
+            color:white;
+           &.show{
+            display: flex;
+            align-items: center;
+             margin-bottom: 20px;
+            justify-content: center;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    
+        }
+    }
+    .sidebar-list-item.show:hover{
+        background-color: #6A6A6A;
+        border-radius: 8px;
+        width: 70px !important;
+        cursor: pointer;
+    }
+        .all{
+            transform: scaleX(1);
+            transition: all .15s linear;
+            transform-origin: left;
+            opacity: 1;
+    width: 185px;
+            a {
+                text-decoration: none;
+                font-family: Manrope;
+                font-size: 18px;
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 0 0px;
+                height: 40px;
+                white-space: nowrap;
+             
+             }
+        }
+    .all.show{
+        transform: scaleX(0);
+        opacity: 0;
+        
+      }
+    .saidbar.show ul li a{
+        display: none;
+       
+       }
+       }
+    
+}
 
 .admin{
 

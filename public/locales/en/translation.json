@@ -11,7 +11,43 @@
     "Favorites":"Favorites",
     "Cart":"Cart",
     "Search":"Search by product",
-    "Comparison":"Comparison"
+    "Comparison":"Comparison",
+    "title":"15% discount on all pendant lamps until",
+    "btn":"Until February",
+    "katalog":"Category",
+    "Почему":"Is there NORNLIGHT?",
+    "товары":"Popular goods",
+    "Только": "Only proven brands",
+    "Блог":"Blog",
+    "Производство":"Production of lamps",
+    "Интернет-магазин": "The NORNLIGHT online store offers a wide range of lighting fixtures your home or office.Here you will find a variety of models lamps, from modern and stylish to classic and elegant. We offer high-quality and reliable lamps from the best manufacturers who will give you comfort and comfort",
+    "Покупая":"By purchasing lamps in our online store, you get excellent value for money. We deliver throughout Russia so that every customer could enjoy the beautiful light and the convenience of online shopping.Contact us today and turn your home to an oasis of warmth and light with NORNLIGHT!",
+    "footer":{
+        "Политика конфидециальности":"Privacy Policy",
+        "Пользовательское соглашение":"Terms of use",
+         "Покупателям":"For buyers",
+        "О компании": "About company",
+        "Доставка и оплата":"Shipping and payment",
+        "Возврат":"Return",
+        "Контакты":"Contacts",
+        "Гарантии":"Guarantees",
+        "Блог":"Blog",
+        "Товары":" Goods",
+        "Люстры":"Chandeliers",
+        "Светильники":"Lamps",
+        "Бра":"Sconce",
+        "Торшеры":"Floor lamps",
+        "Комплектуюшие":"Accessories",
+        "Настольные лампы":"Desk lamp",
+        "Споты":"Spots",
+        "Трековые светильники":"Track lights",
+        "Уличные светильники":"Street lights",
+        "Технические светильники":"Technical luminaires",
+        "Светодиодные ленты":"LED strips"
+   }
+
+
+  
 }
 
 

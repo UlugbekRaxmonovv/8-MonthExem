@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './Blog.scss'
 import { VscArrowRight } from 'react-icons/vsc';
 import rasm from '../../assets/img/blog.png'
@@ -10,6 +10,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
 
 let data = [
     {
@@ -69,11 +71,14 @@ let links = data?.map((el,inx) =>(
 
 
 const Blog = () => {
+  const {theme} =useContext(Context)
+  let {t} =  useTranslation()
     return (
-        <div className='container'>
+     <div className={`bl ${theme ? "light" : ""}`}>
+         <div className='container'>
                <div className="katalog">
                 <div className="katalog_item">
-                    <h1>Блог</h1>
+                    <h1>{t("Blog")}</h1>
                 </div>
                 <Link to={'blog'}>
                 <div className="btn">
@@ -233,6 +238,7 @@ const Blog = () => {
          </div>  
      </Link>
         </div>
+     </div>
     );
 }
 

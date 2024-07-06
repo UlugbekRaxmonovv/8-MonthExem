@@ -6,16 +6,20 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import {store} from './components/context/index.js'
 import LazyLoading from './components/LazyLoading/LazyLoading.jsx'
+import { ContextProvider } from './components/DarkMore/Context.jsx'  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Suspense fallback={<LazyLoading/>}>
+<ContextProvider>
+<Suspense fallback={<LazyLoading/>}>
     <BrowserRouter>
     <Provider store={store}>
       <App />
     </Provider>
     </BrowserRouter>
     </Suspense>
+</ContextProvider>
+ 
    
   </React.StrictMode>,
 )

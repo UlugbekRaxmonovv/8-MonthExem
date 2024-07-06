@@ -31,6 +31,15 @@ export const productApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Product"]
     }),
+
+    createCategory: build.mutation({
+      query: (body)=> ({
+        url:"/category",
+        method: "POST",
+        body
+      }),
+      invalidatesTags: ["Product"]
+    }),
     deleteProduct: build.mutation({
       query: (id)=> ({
         url:`/cards/${id}`,
@@ -56,4 +65,6 @@ export const {
   useUpdateProductMutation,
   useGetProductByIdQuery,
   useGetCategoryQuery,
+  useCreateCategoryMutation,
+  
 } = productApi

@@ -1,3 +1,32 @@
+.kon.light{
+    background-color: #2D3663; 
+    .korzinka_allsy{
+        margin-top: 0px;
+        padding: 40px 0;
+        .korzinka_all_row{
+            a{
+        color: white;
+            }
+            svg{
+                color: white;
+            }
+        }
+    }
+    .h_teg_h1{
+        .h_h1{
+           h6{
+            color: white;
+           } 
+           p{
+            color: white;
+           }
+           h5{
+            color: white;
+           }
+        }
+    }
+}
+
 .h_teg_h1{
     display: flex;
     align-items: center;
@@ -63,6 +92,7 @@ height: 66px;
     padding: 58px 62px;
     position: absolute;
     top: 820px;
+    z-index: 0;
     .map_all_list{
         h1{
             font-family: Manrope;
@@ -113,6 +143,7 @@ height: 66px;
         align-items: center;
         justify-content: center;
         padding: 60px;
+        z-index: -1;
         .map_all{
            iframe{
             width: 868px !important;
@@ -357,9 +388,10 @@ height: 66px;
     .h_teg_h1{
         display: flex;
         align-items: center;
-      flex-wrap: wrap;
+        flex-wrap: wrap;
         padding: 10px 0;
         gap: 32px;
+        z-index: -00;
         .h_h1{
            h6{
             font-family: Manrope;
@@ -400,6 +432,7 @@ height: 66px;
         padding: 28px 16px;
         padding: 140% 0;
         margin-top: -140%;
+        z-index: -1000;
         .map_all{
            iframe{
             width: 328px !important;
@@ -409,7 +442,7 @@ height: 66px;
     }
     .map_all_row{
         width: 328px;
-        height: 399px;
+        height: 450px;
         border-radius: 15px ;
         background: white !important;
         display: grid;
@@ -420,6 +453,8 @@ height: 66px;
         padding: 24px 24px;
         position: absolute;
         top: 720px;
+        margin-left: -13px;
+        z-index: -0;
         .map_all_list{
             h1{
                 font-family: Manrope;
@@ -447,7 +482,8 @@ height: 66px;
             button{
                 width: 258px;
                 height: 50px;
-                border-radius: 100px;        
+                border-radius: 100px;  
+                margin-top: -140px;      
             }
         }
         

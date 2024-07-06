@@ -28,6 +28,7 @@
     "react-router-dom": "^6.24.0",
     "react-switch": "^7.0.0",
     "react-toastify": "^10.0.5",
+    "react-zoom-pan-pinch": "^3.6.1",
     "sass": "^1.77.6",
     "swiper": "^11.1.4"
   },

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect, useContext} from 'react';
 import './SingleRoute.scss'
 import rasm from '../../assets/img/sing.png'
 import { MdOutlineChevronRight } from "react-icons/md";
@@ -10,8 +10,11 @@ import LoadingSingle from '../../components/LoadingSingle/LoadingSingle';
 import ProductTop from '../../components/ProductTop/index'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { Context } from '../../components/DarkMore/Context';
 import { toggleHeart } from '../../components/context/slices/wishlistSlice';
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 const SingleRoute = () => {
+   const {theme} =useContext(Context)
     const [count,setCount] = useState(false)
     const { id } = useParams();
     const { data,isLoading } = useGetProductByIdQuery(id);
@@ -34,6 +37,7 @@ const SingleRoute = () => {
     return (
       <>
       <ProductTop/>
+        <div className= {`sing ${ theme ? "light" :""}`}>
         <div className='container'>
          {
             isLoading ? <LoadingSingle/>
@@ -51,9 +55,23 @@ const SingleRoute = () => {
              </div>
              <div className="singleRoute_row">
                       <div className="singleRoute_row_img">
-                        <div className="img_row">  
-                            <img src={img} alt="allll" />
+                      <TransformWrapper
+        initialScale={1}
+        initialPositionX={0}
+        initialPositionY={0}
+      >
+        {({ zoomIn}) => (
+          <>
+            <div className="img_row"  onClick={() => zoomIn()}>
+                        <TransformComponent>
+                        <img src={img} alt="allll" />
+            </TransformComponent>  
+                         
                         </div>
+          </>
+        )}
+      </TransformWrapper>
+                     
                      <div className="img_link">
                           {
                            data?.url?.map((img,inx) =>(
@@ -83,7 +101,7 @@ const SingleRoute = () => {
                             <h1>{data?.price * count} <span className="s">522 000 ₽</span></h1> 
                             <h5>Профессиональный гоночный хардтейл для кросс-кантри уровня Чемпионата и Кубка Мира. Одна из самых легких рам среди гоночных хардтейлов для кросс-кантри.</h5>
                            <div className="dec">
-                           <div className="inc">
+                           <div className={`inc ${count ? "light" : ""}`}>
                               <div className="in_al">
                                 <button  disabled={count <= 0} onClick={go}>-</button>
                               </div>
@@ -94,8 +112,8 @@ const SingleRoute = () => {
                                 <button onClick={() =>onclick(!count)}>+</button>
                               </div>
                             </div>
-                              <div className="inca">
-                                   <button className={`btn_inc ${count ? "go" : ""}`}>В корзину</button>
+                              <div className={`inca ${count ? "light" : ""}`}onClick={() => setCount(!count)}>
+                                   <button className="btn_inc" >В корзину</button>
                               </div>
                               <div className="wishlist" onClick={() => dispatch(toggleHeart(data))}>
                               {
@@ -187,6 +205,7 @@ const SingleRoute = () => {
 
                     </ul>
                 </div>
+        </div>
         </div>
                 <Footer />
       </>

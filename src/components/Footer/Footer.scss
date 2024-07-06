@@ -1,16 +1,22 @@
-footer{
+.fo{
     background: #F2F2F2;
 .footir_all{
     display: flex;
     align-items: self-start;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 210px;
     padding: 80px 0;
      ul{
-        img{
-            width: 286px;
-            height: 48px;
+        svg {
+            width: 170px;
+            height: 35px;
             object-fit: contain;
+            fill: #454545;
+            .oy{
+                fill: white;
+            }
         }
+  
         .p{
             p{
                 font-family: Manrope;
@@ -77,7 +83,54 @@ footer{
     }
 }
 }
+.fo.light{
+    background-color: #2D3663;
+    .footir_all{
+        display: flex;
+        align-items: self-start;
+        justify-content: center;
+        gap: 210px;
+        padding: 80px 0;
+         ul{
+              svg{   
+                fill: white;
+                .oy{
+                   fill:#454545
+                }
+               }
+            .p{
+                p{
+                    color: white; 
+                }
+            }
+            .img{
+                width: 222px;
+                height: 39px;
+               object-fit: contain;
+               margin-top: 35px;
+                
+            }
+            h5{
 
+                color: white; 
+                padding: 25px 0;
+                
+            }
+    
+            h1{
+                color: white;    
+            }
+            li a{
+                color: white; 
+            }
+          
+         }
+         .icon_alli_list{
+            display: none;
+    
+        }
+    }
+}
 
 @media(max-width:990px){
     footer{
@@ -188,6 +241,7 @@ footer{
         align-items: self-start;
         justify-content: space-between;
         flex-direction: column;
+        gap: 10px;
         padding: 80px 0;
          ul{
             img{

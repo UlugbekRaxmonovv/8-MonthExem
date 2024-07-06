@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './Brendlar.scss'
 import rasm1 from '../../assets/img/brend1.png'
 import rasm2 from '../../assets/img/brend2.png'
@@ -8,16 +8,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
 const Brendlar = () => {
+  const {theme} =useContext(Context)
+  let {t} =  useTranslation()
     return (
-        <div className='container'>
+     <div className={`br ${theme ? "light" : ""}`}>
+         <div className='container'>
 
             
 
 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
 <SwiperSlide>
 <div className="brend">
-<h1>Только проверенные бренды</h1>
+<h1>{t("Только")}</h1>
     <div className="brend_all">
 <div className="brend_all_row">
 <img src={rasm3} alt="" />
@@ -149,6 +154,7 @@ const Brendlar = () => {
       </Swiper>
       </div>
             </div>
+     </div>
     );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Katalog.scss'
 import { VscArrowRight } from "react-icons/vsc";
 import rasm from '../../assets/img/katalogimg.png'
@@ -13,7 +13,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
+
 const Katalog = () => {
+  const {theme} =useContext(Context)
+  let {t} =  useTranslation()
 
     let data = [
         {
@@ -82,10 +87,11 @@ const Katalog = () => {
 
 
     return (
-        <div className='container'>
+       <div className={`kata ${theme ? "light" : ""}`}>
+         <div className='container'>
             <div className="katalog">
                 <div className="katalog_item">
-                    <h1>Каталог</h1>
+                    <h1>{t("katalog")}</h1>
                 </div>
                 <Link to={'catalog'}>
                 <div className="btn">
@@ -157,6 +163,7 @@ const Katalog = () => {
 
              
         </div>
+       </div>
     );
 }
 

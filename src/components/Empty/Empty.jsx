@@ -11,7 +11,7 @@ const Empty = () => {
        <Link to={'/'}> <button style={{padding:'4px 16px', 
         border:'none', 
         backgroundColor:'#7000FF', 
-        color:'white',borderRadius:'4px', marginTop:'20px'}}>Logout</button></Link>
+        color:'white',borderRadius:'4px', marginTop:'20px', cursor:'pointer'}}>Logout</button></Link>
     </div>
     );
 }

@@ -1,9 +1,8 @@
-import React,{useContext, useEffect} from 'react';
+import React,{ useEffect} from 'react';
 import './CreateProduct.scss'
 import { useFormInputValue } from '../../../components/Hook/useFormInputValur';
-import { useCreateProductMutation } from '../../../components/context/api/productApi';
+import { useCreateProductMutation, useGetCategoryQuery } from '../../../components/context/api/productApi';
 import { toast } from 'react-toastify';
-// import { useGetProductsQuery } from '../../../components/context/api/productApi';
 
 const initialState ={
     title:'',
@@ -13,8 +12,8 @@ const initialState ={
     desc:''
 }
 const CreateProduct = () => {
-    // const {data: products} = useGetProductsQuery();
-    // console.log(products);
+    const {data:category} = useGetCategoryQuery();
+    console.log(category);
     const {setState,state,handleChange}= useFormInputValue(initialState);
     const [usePost,{isLoading,isSuccess}] = useCreateProductMutation();
     useEffect(() =>{
@@ -50,11 +49,16 @@ const CreateProduct = () => {
                 <label htmlFor=""> Desc</label>
                 <input type="text"  required value={state.desc}  onChange={handleChange} name='desc'/>
                 <label htmlFor="">Category</label>
-                <select  id=""  required  value={state.category} onChange={handleChange} name='category'>
-                <option value="Tanlang">Tanlang</option>
-                <option value="Tanlang">Tanlang</option>
-                <option value="Tanlang">Tanlang</option>
-                </select>
+                {
+                 <select  id=""  required  value={state.category} onChange={handleChange} name='category'>
+                    <option value="">Tanlang</option>
+                    {
+                        category?.map((item,index) => {
+                            return <option key={index} value={item.title}>{item.title}</option>
+                        })
+                    }
+                      </select>
+                }      
                 <label htmlFor="">Image-url</label>
                 <textarea required id="" cols="30" rows="10" value={state.url} onChange={handleChange}  name='url'  >
 

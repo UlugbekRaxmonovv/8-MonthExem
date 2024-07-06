@@ -1,6 +1,22 @@
 body{
     overflow-x: hidden;
 }
+.kata.light{
+    background-color: #2D3663;
+}
+.kata.light .katalog{
+    background-color: #2D3663;
+    margin-top: 0;
+    padding: 97px 0;
+    .katalog_item{
+        h1{
+            color: white;
+        }
+    }
+.btn{
+    background-color: white;
+}
+} 
 .katalog{
     display: flex;
     align-items: center;
@@ -50,6 +66,8 @@ body{
     }
    
 }
+
+
 .grid{
     padding: 40px 0;
     display: grid;
@@ -426,6 +444,8 @@ body{
             border-radius: 100px;
             border: 1px solid #454545;
             margin-left: 35px;
+            background-color: white;
+            border: none;
         }
 
     }
@@ -552,6 +572,7 @@ body{
         width: 328px;
         border:  none;
         position: relative;
+        background-color: white;
         .btnt{
             display: flex;
             position: absolute;
@@ -564,6 +585,7 @@ body{
             border-radius: 100px;
             border: 1px solid #454545;
             margin-left: 0%;
+            background-color: white;
         }
 
     }

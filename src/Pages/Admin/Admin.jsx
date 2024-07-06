@@ -1,29 +1,34 @@
-import React, { useState, Component, createContext } from 'react';
+import React, { useState, Component, createContext, useContext } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { VscExtensions } from "react-icons/vsc";
 import { LuPencilLine } from "react-icons/lu";
 import { HiOutlineMenu } from "react-icons/hi";
 import { MdLogout } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 import './Admin.scss'
 import { VscChromeClose } from "react-icons/vsc";
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle } from 'react-icons/bs';
  import Switch from "react-switch";
- export const ThemeContext = createContext(null)
+ import { Context } from '../../components/DarkMore/Context';
+import { IoSunnyOutline, IoSunnySharp } from 'react-icons/io5';
 const Admin = () => {
-  const [them,setThem]  = useState('light')
+  const {theme, setTheme} =useContext(Context)
   const [show,setShow]  = useState(false)
   let {pathname} = useLocation();
+  const navigate = useNavigate();
   if(pathname.includes('/tavar-products')){
   return <></>;
 }
 
-  const toogleThem = () => {
-    setThem((curr) => ( curr  === "light" ? "dark" : "light"))
-  }
+
+const logout = () => {
+  localStorage.removeItem('x-auth-token');
+  navigate('/');
+};
      return (
        <>
-         <ThemeContext.Provider value={{ them,setThem }}>
-         <div className="home" id={them}>
+     <div className="ad">
+     <div className={`home  ${theme ? "light" : ""} `}>
      
      <div className="hom">
      <div className="home_All">
@@ -43,12 +48,15 @@ const Admin = () => {
                <BsFillEnvelopeFill className='icon'/>
                <BsPersonCircle className='icon'/>
              
-               <label>
-           <Switch onChange={toogleThem} checked={them  === "dark"} />
-         </label>
+               {
+                                  theme ? 
+                                  <IoSunnyOutline className='svg' onClick={() =>setTheme(!theme)} />
+                                  :
+                                  <IoSunnySharp className='svg' onClick={() =>setTheme(!theme)} />
+                                }
                </div>
                 </div>
-           <div className="admin">
+           <div className={`admin  ${theme ? "light" : ""} `}>
          
          <div className={`saidbar ${show ? "show" : <></>}`}>
          <ul>
@@ -58,19 +66,22 @@ const Admin = () => {
          <Link to={'create-product'}> Create product</Link>
        </li>
            </div>
+
+
            <div className={`sidebar-list-item ${show ? "show" : ""}`}>
-           <Link to={'manage-category'}><LuPencilLine className={`icon ${show ? "show" : ""}`}/> </Link>    
+           <Link to={'create-category'}> < LuPencilLine className={`icon ${show ? "show" : ""}`}/></Link>   
          <li  className={`all ${show ? "show" : ""}`}>
-         <Link to={'manage-category'}>    Manage product</Link>
+         <Link to={'create-category'}> Manage product</Link>
+       </li>
+           </div>
+           <div className={`sidebar-list-item ${show ? "show" : ""}`}>
+           <Link to={'manage-category'}><VscExtensions className={`icon ${show ? "show" : ""}`}/> </Link>    
+         <li  className={`all ${show ? "show" : ""}`}>
+         <Link to={'manage-category'}>  Create category  </Link>
        </li>
            </div>
    
-           <div className={`sidebar-list-item ${show ? "show" : ""}`}>
-           <Link to={'create-category'}> <VscExtensions className={`icon ${show ? "show" : ""}`}/></Link>   
-         <li  className={`all ${show ? "show" : ""}`}>
-         <Link to={'create-category'}> Create category</Link>
-       </li>
-           </div>
+       
    
            <div className={`sidebar-list-item ${show ? "show" : ""}`}>
            <Link  to={'manage-product'}>   <LuPencilLine className={`icon ${show ? "show" : ""}`}/> </Link>
@@ -79,8 +90,8 @@ const Admin = () => {
        </li>
            </div>
    </ul>
-   <Link to={'/'}>
-   <div className={`logouts ${show ? "showa" : ""}`} >
+  
+   <div className={`logouts ${show ? "showa" : ""}`}onClick={logout} >
    <div className="logout_all">
    <MdLogout />
        </div>
@@ -89,7 +100,7 @@ const Admin = () => {
        </div>
    </div>
    
-   <div className={`logout ${show ? "show" : ""}`} >
+   <div className={`logout ${show ? "show" : ""}`}  onClick={logout}>
    <div className="logout_all">
    <MdLogout />
        </div>
@@ -97,13 +108,13 @@ const Admin = () => {
            <h1>Log out</h1>
        </div>
    </div>
-   </Link>
          </div>
          <div className="admin_content">
           <Outlet />
           </div>
         </div>
-         </ThemeContext.Provider>
+     </div>
+
    
 
      

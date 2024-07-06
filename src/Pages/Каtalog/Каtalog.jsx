@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 import rasm from '../../assets/img/katalogimg.png'
 import rasm1 from '../../assets/img/katalogimg1.png'
@@ -23,7 +23,9 @@ import Blog from '../../components/Blog/Blog'
 import Brendlar from '../../components/Brendlar/Brendlar';
 import Footer from '../../components/Footer/Footer'
 import ProductTop from '../../components/ProductTop/index'
+import { Context } from '../../components/DarkMore/Context';
 const Katalog = () => {
+  const {theme} =useContext(Context)
     let data = [
         {
             id:1,
@@ -113,7 +115,8 @@ const Katalog = () => {
     return (
      <>
 <ProductTop/>
-        <div className='container'>
+      <div className={`kat ${theme ? "light" : ""}`}>
+      <div className='container'>
               <div className="korzinka_allsy">
             <div className="korzinka_all_row">
                 <NavLink to={'/'}>
@@ -214,6 +217,7 @@ const Katalog = () => {
 
 
         </div>
+      </div>
         <Footer />
      </>
     );

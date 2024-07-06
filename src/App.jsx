@@ -21,7 +21,9 @@ import CreateProduct from './Pages/Admin/CreateProduct/CreateProduct'
 import ManageCategory from './Pages/Admin/ManageCategory/ManageCategory'
 import ManageProduct from './Pages/Admin/ManageProduct/ManageProduct'
 import TavarProducts from './Pages/TavarProducts/TavarProducts'
-
+import Окомпании from './Pages/Окомпании/Окомпании'
+import Возврат from './Pages/Возврат/Возврат'
+import Garantiya from './Pages/Гарантии/Garantiya'
 
 function App() {
 
@@ -38,6 +40,9 @@ function App() {
       <Route path="/blog" element={<Blog/>} />
       <Route path='/contact' element={<Kontact/>}/>
       <Route path='/tavar-products' element={<TavarProducts/>}/>
+      <Route path='/companies' element={<Окомпании/>}/>
+      <Route path='/return' element={<Возврат/>}/>
+      <Route path='/garranty' element={<Garantiya/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/' element={<Auth/>}>
         <Route path='/admin' element={<Admin/>}>

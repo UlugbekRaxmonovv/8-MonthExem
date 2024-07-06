@@ -31,11 +31,11 @@ const Login = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (state.UserName === "john32" && state.password === "12345678") {
+    if (state.UserName === "john32" && state.password === "87654321") {
       toast.success("Welcome");
       dispatch(setToken("token123"));
       navigate('/admin');
-      setState(initialState);
+      // setState(initialState);
     } else {
       toast.error("Invalid Username or Password");
     }
@@ -89,7 +89,8 @@ const Login = () => {
         </form>
       </div>
     </div>
-  );
+  )
+  ;
 }
 
 export default Login;

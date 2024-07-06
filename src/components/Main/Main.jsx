@@ -1,30 +1,39 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './Main.scss'
 import rasm from '../../assets/img/main.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
+import { Autoplay, Pagination } from 'swiper/modules';
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
 const Main = () => {
+  const {theme} =useContext(Context)
+  let {t} =  useTranslation()
     return (
-        <div className='Main_all'>
+        <div className={`Main_all ${theme ? "light" : ""}`}>
         <section className='main_hammasi'>
           
 
 
             <Swiper
         spaceBetween={30}
+        Autoplay={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")}</h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -34,8 +43,8 @@ const Main = () => {
 
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")} </h1>
+            <button> {t("btn")} </button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -45,8 +54,8 @@ const Main = () => {
 
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")} </h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -55,8 +64,8 @@ const Main = () => {
 
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")}</h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -65,8 +74,8 @@ const Main = () => {
 
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")}</h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -74,8 +83,8 @@ const Main = () => {
             </div></SwiperSlide>
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")}</h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />
@@ -83,8 +92,8 @@ const Main = () => {
             </div></SwiperSlide>
             <SwiperSlide>  <div className="main container">
           <div className="main_all">
-            <h1>Скидка 15% на все подвесные светильники </h1>
-            <button>до 5 февраля</button>
+            <h1> {t("title")}</h1>
+            <button>{t("btn")}</button>
           </div>
           <div className="main_all">
            <img src={rasm} alt="" />

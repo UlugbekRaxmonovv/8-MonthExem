@@ -1,3 +1,23 @@
+.pro.light{
+    background-color: #2D3663;
+    .Production{
+        margin-top: 0px;
+        padding: 67px 0;
+     .Production_all{
+        h1{
+       color:white
+                    
+        }
+        .h1{
+            color: white;
+        }
+        p{
+         
+            color: white;         
+        }
+     }   
+    }
+}
 .Production{
     display: grid;
     grid-template-columns: 1fr 1fr;

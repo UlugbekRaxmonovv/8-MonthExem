@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect, useContext } from 'react';
 import './Products.scss'
 import './ProductAll.scss'
 import { FaHeart, FaRegHeart } from "react-icons/fa";
@@ -17,7 +17,11 @@ import { addToCart } from '../context/slices/cartSlice';
 import { useDeleteProductMutation } from '../context/api/productApi';
 let Api_Url = "https://667fec3456c2c76b495a8d83.mockapi.io"
 import { useGetCategoryQuery } from '../context/api/productApi';
-const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
+const Products = ({data, btn1, btn,isLoading,isAdmin}) => {
+    let {t} =  useTranslation()
+    const {theme} =useContext(Context)
     const [deletUser] = useDeleteProductMutation();
     const dispatch = useDispatch();
     const wishlist = useSelector(state => state.wishlist.value);
@@ -25,7 +29,9 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [productDetails, setProductDetails] = useState(null);
     const {data:category} = useGetCategoryQuery();
-     const [ count,setCount] =useState(4)
+    const [ count,setCount] =useState(4)
+    const [ value,setValue] =useState("all")
+
 
     useEffect(() => {
         const id = searchParams.get('details');
@@ -45,8 +51,16 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
         deletUser(id)
       }
 
+      let products__category = category?.map(category => (
+        <>
+          <button onClick={() => setValue(category?.title)} className='category__btn' key={category.id}>{category.title}</button>
+        </>
+      ))
+    
+    
+      const categoryFilter = value === "all" ? data : data.filter(el => el?.category === value)
       
-    let links = data?.slice(0,count).map((users) =>(
+    let links = categoryFilter?.slice(0,count).map((users) =>(
         <div className="card" key={users.id}>
         <div className="img">
          <div className="img_row">
@@ -98,10 +112,11 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
         setSearchParams({});
     };
     return (
-        <div className='container'>
+        <div className={`pro ${theme ? "light" : ""}`}>
+  <div className='container'>
                 <div className="katalog">
                 <div className="katalog_item">
-                    <h1>{title}</h1>
+                    <h1>{t("товары")}</h1>
                 </div>
                 <Link to={'/tavar-products'}>
                 <div className="btn"> 
@@ -121,13 +136,9 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
             }
 
             <ul className='category'>
-                       {
-                        category?.map((el) =>(
-                            <li key={el}>
-                                <data>{el.title}</data>
-                            </li>
-                        ))
-                        }
+                <button  onClick={() => setValue("all")}>all</button>
+                {products__category
+                }     
                
             </ul>
 
@@ -155,6 +166,8 @@ const Products = ({data, btn1, btn,isLoading,title,isAdmin}) => {
                 </Modul>
             )}
         </div>
+        </div>
+      
     );
 }
 

@@ -1,3 +1,131 @@
+.sing.light{
+    background-color: #2D3663;
+    .singleRoute{
+        .glavnaya{
+            p{
+                color: white;
+                
+            }
+            svg{
+                color: white;
+            }
+        }
+    }
+    .singleRoute_row{
+        .singleRoute_row_img{
+           .img_link{
+            
+           }
+           .singleRoute_row_teg{
+            h1{
+                color: white;          
+            }
+            p{
+                color: white;    
+    
+            }
+            .sorch{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0;
+                margin-top: -30px;
+                .sorch_all{
+                    display: flex;
+                align-items: center;
+                    p{
+                        color:white
+    
+                    }
+                }
+                img{
+                    width: 139px;
+                    height: 17px;
+                    object-fit: contain;
+                }
+            }
+            span{
+                color:white
+    
+            }
+            h1{
+                color:white
+                .s{
+                    color:white
+                    
+                }
+                
+            }
+            h5{
+                color:white
+            }
+            .dec{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-top: 30px;
+                
+                .inc{
+                    background-color: white;
+                    .in_al > button{
+        font-size: 20px;
+        
+                    }
+              
+                
+                }
+                .inca{
+                    .btn_inc{
+                      background-color: white;
+                       color: black;
+                    }
+                }
+                .wishlist{
+                    background: #F8F8F8;                
+                }
+    
+    
+            }
+              
+            
+    
+           }
+        }
+        
+    }
+    .haraktrski{
+        margin-top: 50px;
+        padding: 50px 0;
+        h1{
+            color:white
+            
+        }
+        .Ul_link{
+            border: 1px solid #F8F8F8;
+            margin-top: 23px;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 10px;
+                color:white
+    
+            }
+            .list{
+                background: #F8F8F8;
+                color:black;
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+        
+    
+            }
+        }
+    }
+}
+
+
 .singleRoute{
     display: flex;
     align-items: center;
@@ -160,7 +288,7 @@ margin-top: 40px;
             margin-top: 30px;
             .inc{
                 display: none;
-                display: flex;
+                // display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 40px;
@@ -188,9 +316,14 @@ margin-top: 40px;
           
             
             }
+            .inc.light{
+                display: flex;
+            }
+
             .inca{
+               
                 .btn_inc{
-                    opacity: 0;
+                    display: block;
                     width: 180px;
                     height: 52px;
                     background: #454545;
@@ -211,6 +344,9 @@ margin-top: 40px;
                    opacity: 1;
                    
                 }
+            }
+            .inca.light{
+                display: none;
             }
             .wishlist{
                 display: flex;

@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Kontact.scss'
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
+import { Context } from '../../components/DarkMore/Context';
 import Footer from '../../components/Footer/Footer'
 
 const Коntact = () => {
+  const {theme} =useContext(Context)
     return (
        <>
-        <div className='container'>
-               <div className="korzinka_allsy">
+       <div className={`kon ${theme ? "light" : ""}`}>
+       <div className='container'>
+        <div className="korzinka_allsy">
             <div className="korzinka_all_row">
                 <NavLink to={'/'}>
                 Главная
@@ -67,6 +70,8 @@ const Коntact = () => {
           </div>
          </div>
          <Footer/>
+       </div>
+    
        </>
     );
 }

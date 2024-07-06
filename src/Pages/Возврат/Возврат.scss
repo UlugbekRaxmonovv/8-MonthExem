@@ -1,0 +1,827 @@
+.vaz.light{
+    background-color: #2D3663; 
+    // height: 10vh;
+    .korzinka_allsy{
+        margin-top: 0px;
+        padding: 40px 0;
+        .korzinka_all_row{
+            a{
+        color: white;
+            }
+            svg{
+                color: white;
+            }
+        }
+    }
+    .vozrat{
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        padding: 200px 0;
+        margin-top: -150px;
+        .vozrat_a{
+            .vozrat_row{
+                h1{
+                    color: white;
+                    
+                }
+            }
+            h5{
+                color: white;
+                margin-top: 20px;
+        
+            }
+            h6{
+                color: white;
+                
+            }
+            ul{
+                max-width: 640px;
+                    width: 100%;
+                    // height: 208px;
+                    padding: 20px 0;
+                    li{
+                        color: white;
+                    
+                }
+            }
+            h4{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 442px;
+                width: 100%;
+                height: 34px;
+                color: white;
+    
+            
+            }
+            h3{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: white;
+                padding: 20px 0;
+                
+            }
+            .list{
+                max-width: 640px;
+                width: 100%;
+                height: 280px;  
+                li{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: white;
+    
+                }
+            }
+        }
+    }
+}
+
+.vozrat{
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    padding: 200px 0;
+    margin-top: -150px;
+    .vozrat_a{
+        .vozrat_row{
+            h1{
+                font-family: Manrope;
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 70.4px;
+                text-align: left;
+                color: #454545;
+                
+            }
+        }
+        h5{
+            font-family: Manrope;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 33.6px;
+            text-align: left;
+            max-width: 486px;
+            width: 100%;
+            height: 34px;
+    
+        }
+        h6{
+            max-width: 640px;
+            width: 100%;
+            height: 100px;
+            font-family: Manrope;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: left;
+            color: #000000;
+            padding: 28px 0;
+            
+        }
+        ul{
+            max-width: 640px;
+                width: 100%;
+                padding: 20px 0;
+                li{
+                list-style-type: disc;
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #2F4DA3;
+                margin-left: 40px;
+                
+            }
+        }
+        h4{
+            font-family: Manrope;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 33.6px;
+            text-align: left;
+            max-width: 442px;
+            width: 100%;
+            height: 34px;
+            color: #000000;
+
+        
+        }
+        h3{
+            font-family: Manrope;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: left;
+            color: #000000;
+            padding: 20px 0;
+            
+        }
+        .list{
+            max-width: 640px;
+            width: 100%;
+            height: 280px;  
+            li{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #2F4DA3;
+
+            }
+        }
+    }
+}
+@media(max-width:900px){
+    .vozrat{
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 250px 0;
+        margin-top: -250px;
+        .vozrat_a{
+            .vozrat_row{
+                h1{
+                    font-family: Manrope;
+                    font-size: 34px;
+                    font-weight: 700;
+                    line-height: 70.4px;
+                    text-align: left;
+                    color: #454545;
+                    
+                }
+            }
+            h5{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 486px;
+                width: 100%;
+                height: 34px;
+        
+            }
+            h6{
+                max-width: 640px;
+                width: 100%;
+                height: 150px;
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 28px 0;
+                
+            }
+            ul{
+                max-width: 640px;
+                    width: 100%;
+                    padding: 100px 0;
+                    li{
+                    list-style-type: disc;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+                    margin-left: 40px;
+                    
+                }
+            }
+            h4{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 442px;
+                width: 100%;
+                height: 54px;
+                color: #000000;
+                padding: 10px 0;
+                margin-top: -100px;
+    
+            
+            }
+            h3{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 20px 0;
+                
+            }
+            .list{
+                max-width: 640px;
+                width: 100%;
+                height: 280px; 
+                margin-top: -90px; 
+                li{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+    
+                }
+            }
+            .h4{
+                margin-top: 250px;
+            }
+        }
+    }   
+    .vaz.light{
+        .vozrat{
+            display: flex;
+            align-items: self-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 250px 0;
+            margin-top: -250px;
+            .vozrat_a{
+                .vozrat_row{
+                    h1{
+                        font-family: Manrope;
+                        font-size: 34px;
+                        font-weight: 700;
+                        line-height: 70.4px;
+                        text-align: left;
+                        color: white;
+                        
+                    }
+                }
+                h5{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 486px;
+                    width: 100%;
+                    height: 34px;
+            
+                }
+                h6{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 150px;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: white;
+                    padding: 28px 0;
+                    
+                }
+                ul{
+                    max-width: 640px;
+                        width: 100%;
+                        padding: 100px 0;
+                        li{
+                        list-style-type: disc;
+                        font-family: Manrope;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        text-align: left;
+                        color: white;
+                        margin-left: 40px;
+                        
+                    }
+                }
+                h4{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 442px;
+                    width: 100%;
+                    height: 74px;
+                    color: white;
+                    padding: 10px 0;
+                    margin-top: -100px;
+        
+                
+                }
+                h3{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #000000;
+                    padding: 20px 0;
+                    color: white;
+                    
+                }
+                .list{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 280px; 
+                    margin-top: -90px; 
+                    li{
+                        color: white;
+        
+                    }
+                }
+                .h4{
+                    margin-top: 250px;
+                    color: white;
+                }
+                h6{
+                    color: white;
+                }
+            }
+        }    
+    }
+}
+
+@media(max-width:400px){
+    .vozrat{
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 250px 0;
+        margin-top: -250px;
+        .vozrat_a{
+            .vozrat_row{
+                h1{
+                    font-family: Manrope;
+                    font-size: 34px;
+                    font-weight: 700;
+                    line-height: 70.4px;
+                    text-align: left;
+                    color: #454545;
+                    
+                }
+            }
+            h5{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 486px;
+                width: 100%;
+                height: 34px;
+        
+            }
+            h6{
+                max-width: 640px;
+                width: 100%;
+                height: 150px;
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 28px 0;
+                
+            }
+            ul{
+                max-width: 640px;
+                    width: 100%;
+                    padding: 100px 0;
+                    li{
+                    list-style-type: disc;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+                    margin-left: 40px;
+                    
+                }
+            }
+            h4{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 442px;
+                width: 100%;
+                height: 54px;
+                color: #000000;
+                padding: 10px 0;
+                margin-top: -100px;
+    
+            
+            }
+            h3{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 20px 0;
+                
+            }
+            .list{
+                max-width: 640px;
+                width: 100%;
+                height: 280px; 
+                margin-top: -90px; 
+                li{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+    
+                }
+            }
+            .h4{
+                margin-top: 250px;
+            }
+        }
+    }   
+    .vaz.light{
+        .vozrat{
+            display: flex;
+            align-items: self-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 250px 0;
+            margin-top: -250px;
+            .vozrat_a{
+                .vozrat_row{
+                    h1{
+                        font-family: Manrope;
+                        font-size: 34px;
+                        font-weight: 700;
+                        line-height: 70.4px;
+                        text-align: left;
+                        color: white;
+                        
+                    }
+                }
+                h5{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 486px;
+                    width: 100%;
+                    height: 34px;
+            
+                }
+                h6{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 150px;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: white;
+                    padding: 28px 0;
+                    
+                }
+                ul{
+                    max-width: 640px;
+                        width: 100%;
+                        padding: 100px 0;
+                        li{
+                        list-style-type: disc;
+                        font-family: Manrope;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        text-align: left;
+                        color: white;
+                        margin-left: 40px;
+                        
+                    }
+                }
+                h4{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 442px;
+                    width: 100%;
+                    height: 74px;
+                    color: white;
+                    padding: 10px 0;
+                    margin-top: -100px;
+        
+                
+                }
+                h3{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #000000;
+                    padding: 20px 0;
+                    color: white;
+                    
+                }
+                .list{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 280px; 
+                    margin-top: -90px; 
+                    li{
+                        color: white;
+        
+                    }
+                }
+                .h4{
+                    margin-top: 250px;
+                    color: white;
+                }
+                h6{
+                    color: white;
+                }
+            }
+        }    
+    }
+}
+
+@media(max-width:360px){
+    .vozrat{
+        display: flex;
+        align-items: self-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 250px 0;
+        margin-top: -250px;
+        .vozrat_a{
+            .vozrat_row{
+                h1{
+                    font-family: Manrope;
+                    font-size: 34px;
+                    font-weight: 700;
+                    line-height: 70.4px;
+                    text-align: left;
+                    color: #454545;
+                    
+                }
+            }
+            h5{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 486px;
+                width: 100%;
+                height: 34px;
+        
+            }
+            h6{
+                max-width: 640px;
+                width: 100%;
+                height: 150px;
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 28px 0;
+                
+            }
+            ul{
+                max-width: 640px;
+                    width: 100%;
+                    padding: 100px 0;
+                    li{
+                    list-style-type: disc;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+                    margin-left: 40px;
+                    
+                }
+            }
+            h4{
+                font-family: Manrope;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 33.6px;
+                text-align: left;
+                max-width: 442px;
+                width: 100%;
+                height: 54px;
+                color: #000000;
+                padding: 10px 0;
+                margin-top: -100px;
+    
+            
+            }
+            h3{
+                font-family: Manrope;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: left;
+                color: #000000;
+                padding: 20px 0;
+                
+            }
+            .list{
+                max-width: 640px;
+                width: 100%;
+                height: 280px; 
+                margin-top: -90px; 
+                li{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #2F4DA3;
+    
+                }
+            }
+            .h4{
+                margin-top: 250px;
+            }
+        }
+    }   
+    .vaz.light{
+        .vozrat{
+            display: flex;
+            align-items: self-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 250px 0;
+            margin-top: -250px;
+            .vozrat_a{
+                .vozrat_row{
+                    h1{
+                        font-family: Manrope;
+                        font-size: 34px;
+                        font-weight: 700;
+                        line-height: 70.4px;
+                        text-align: left;
+                        color: white;
+                        
+                    }
+                }
+                h5{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 486px;
+                    width: 100%;
+                    height: 34px;
+            
+                }
+                h6{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 150px;
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: white;
+                    padding: 28px 0;
+                    
+                }
+                ul{
+                    max-width: 640px;
+                        width: 100%;
+                        padding: 100px 0;
+                        li{
+                        list-style-type: disc;
+                        font-family: Manrope;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        text-align: left;
+                        color: white;
+                        margin-left: 40px;
+                        
+                    }
+                }
+                h4{
+                    font-family: Manrope;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 33.6px;
+                    text-align: left;
+                    max-width: 442px;
+                    width: 100%;
+                    height: 74px;
+                    color: white;
+                    padding: 10px 0;
+                    margin-top: -100px;
+        
+                
+                }
+                h3{
+                    font-family: Manrope;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    text-align: left;
+                    color: #000000;
+                    padding: 20px 0;
+                    color: white;
+                    
+                }
+                .list{
+                    max-width: 640px;
+                    width: 100%;
+                    height: 280px; 
+                    margin-top: -90px; 
+                    li{
+                        color: white;
+        
+                    }
+                }
+                .h4{
+                    margin-top: 250px;
+                    color: white;
+                }
+                h6{
+                    color: white;
+                }
+            }
+        }    
+    }
+}
+
+
+
+

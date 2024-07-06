@@ -1,36 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Production.scss'
-
+import {useTranslation} from "react-i18next"
+import { Context } from '../DarkMore/Context';
 const Production = () => {
+    let {t} =  useTranslation()
+    const {theme} =useContext(Context)
     return (
-        <div className='container'>
+        <div className={`pro ${theme ? "light" : ""}`}>
+             <div className='container'>
             <div className="Production">
                 <div className="Production_all">
                     <h1 className='h1'>Блог</h1>
-                    <h1>Производство светильников</h1>
+                    <h1>{t("Производство")}</h1>
                 </div>
                 <div className="Production_all">
                   <p>
-                  Интернет-магазин NORNLIGHT предлагает широкий 
-                  ассортимент светильников для освещения
-                   вашего дома или офиса.
-                   У нас вы найдете разнообразные модели
-                    светильников, от современных и стильных 
-                    до классических и элегантных. Мы предлагаем
-                    качественные и надежные светильники от лучших 
-                    производителей, которые подарят вам комфорт 
-                    и уют
+                    {t("Интернет-магазин")}
                   </p>
                   <p>
-                  Покупая светильники в нашем интернет-магазине, вы получаете отличное соотношение цены и качества. Мы осуществляем доставку по всей России, чтобы каждый клиент
-                     мог насладиться прекрасным светом и 
-                     удобством покупки онлайн. 
-                     Обратитесь к нам сегодня и превратите ваш 
-                     дом в оазис тепла и света с NORNLIGHT!
+                  {t("Покупая")}
                   </p>
                 </div>
             </div>
             
+        </div>
         </div>
     );
 }

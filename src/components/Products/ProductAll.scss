@@ -1,11 +1,30 @@
+
+.pro.light{
+  background-color: #2D3663;
+  .katalog{
+    margin-top: 0;
+    padding: 97px 0;
+    .katalog_item{
+        h1{
+             color: white;
+        }
+    }
+    .btn{
+       background-color: white;
+    }
+ }
+}
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
    margin-top: 82px;
+   gap: 4px;
     .card{
       width: 326px;
       height: 350px;
         padding: 10px 27px;
+        background-color: white;
+        border-radius: 4px;
        .img{
         display: flex;
         align-items: self-start;
@@ -17,6 +36,10 @@
                 width: 173px;
                 height: 216px;
                 object-fit: contain;
+                transition: all .15s linear;
+                &:hover{
+                   transform: scale(1.05);
+                }
                 
             }
         }
@@ -140,6 +163,7 @@ text-decoration: line-through;
         height: 50px;
         border-radius: 100px;
         border: 1px solid #454545;
+        background-color: white;
         margin-top: 32px;
         .btn1{
             display: flex;
@@ -232,15 +256,17 @@ text-decoration: line-through;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        width: 300px;
+        width: 315px;
         height: 50px;
         border-radius: 100px;
         border: 1px solid #454545;
+        background-color: white;
         margin-top: 32px;
         .btn1{
             display: flex;
             align-items: center;
             justify-content: center;
+           
           p{
             font-family: Manrope;
             font-size: 16px;

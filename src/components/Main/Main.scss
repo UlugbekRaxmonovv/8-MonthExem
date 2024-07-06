@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
+}
+.Main_all.light{
+    background-color: #2D3663;
 }
 .main_hammasi{
     width: 1714px;
@@ -31,10 +35,10 @@
     
 }
 button{
-    width: 495px;
+    width:  290px;
     border-radius: 100px;  
     font-family: Manrope;
-    font-size: 64px;
+    font-size: 35px;
     font-weight: 700;
     line-height: 87.42px;
    text-align: left;
@@ -92,11 +96,12 @@ button{
         
     }
     button{
-        width: 300px;
+        width:  290px;
+        border-radius: 100px;  
+        font-size: 35px;
         height: 56px;
         border-radius: 100px;  
         font-family: Manrope;
-        font-size: 40px;
         font-weight: 700;
         line-height: 54.42px;
        text-align: left;
@@ -262,11 +267,11 @@ button{
         
     }
     button{
-        width: 210px;
+        width: 200px;
         height: 49px;    
         border-radius: 100px;  
         font-family: Manrope;
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 700;
         line-height: 38.25px;
         text-align: left;
