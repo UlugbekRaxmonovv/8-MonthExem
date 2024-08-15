@@ -147,7 +147,7 @@ const Products = ({data, btn1, btn,isLoading,isAdmin}) => {
             </div>
            <div className="count">
            <Stack direction="row" spacing={2}>
-      <Button variant="contained" onClick={() => setCount(p => p + count)}>Contained</Button>
+      <Button className='bts' variant="contained" onClick={() => setCount(p => p + count)}>Contained</Button>
     </Stack>
            </div>
           <Link to={'/tavar-products'}>

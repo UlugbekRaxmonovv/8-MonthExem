@@ -1,6 +1,6 @@
 
 .pro.light{
-  background-color: #2D3663;
+  background-color: #1d2031 !important;
   .katalog{
     margin-top: 0;
     padding: 97px 0;
@@ -114,6 +114,9 @@ text-decoration: line-through;
   align-items: center;
   justify-content: center;
   padding: 40px 0;
+  .bts{
+    background-color: #444444 !important;
+  }
 }
  @media(max-width:900px){
   .wrapper{

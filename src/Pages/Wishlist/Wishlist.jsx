@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Empty from '../../components/Empty/Empty';
 import Footer from '../../components/Footer/Footer';
@@ -8,8 +8,10 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { toggleHeart } from '../../components/context/slices/wishlistSlice'; 
 import { addToCart } from '../../components/context/slices/cartSlice'; 
 import Loading from '../../components/Loading/Loading';
-
+import { Context } from '../../components/DarkMore/Context';
+import './Wishlist.scss'
 const Wishlist = ({isLoading}) => {
+  const {theme} =useContext(Context)
     const wishlistItems = useSelector((state) => state.wishlist.value);
     console.log(wishlistItems);
     const dispatch = useDispatch();
@@ -55,9 +57,10 @@ const Wishlist = ({isLoading}) => {
   ))
     return (
        <>
-        <div className='container'>
             
-            {
+   <div className={`w ${theme ? "light" : ""}`}>
+  <div className="container">
+  {
                wishlistItems.length ? 
              <>
                  <div className="al_h2">
@@ -76,8 +79,9 @@ const Wishlist = ({isLoading}) => {
                   <Empty/>
                
             }
-       </div>
+  </div>
             <Footer />
+   </div>
        </>
     );
 }
